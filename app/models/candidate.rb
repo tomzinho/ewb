@@ -3,6 +3,8 @@ class Candidate < ApplicationRecord
   has_many :resume, dependent: :destroy
   has_many :applies, dependent: :destroy
 
+  mount_uploader :photo, PhotoUploader
+
   validates :small_desc,length: { in: 30..240 }
   validates :github_link, format: { with: %r/(\w)?(github.com)\/(?<handler>\w+)\z/,
             message: "Must be a full GitHub link" }
