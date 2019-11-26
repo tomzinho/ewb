@@ -1,6 +1,8 @@
 class Resume < ApplicationRecord
   belongs_to :candidate
 
+  mount_uploader :photo, PhotoUploader
+
   validates :candidate_id, presence: true
   validates :resume_language, inclusion: { in: ["english","spanish","portuguese", "french", "german", "japanese", "chinese"], allow_nil: false }
   validates :description, presence: true, length: { maximum: 1000, too_long: "%{count} characters is the maximum allowed" }
