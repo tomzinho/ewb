@@ -8,10 +8,15 @@ class Candidate < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
-  validates :small_desc,length: { in: 30..240 }
+  validates :small_desc, length: { in: 30..240 }, on: :update
+
   validates :github_link, format: { with: %r/(\w)?(github.com)\/(?<handler>\w+)\z/,
-            message: "Must be a full GitHub link" }
-  validates :address, presence: true
+            message: "Must be a full GitHub link" }, on: :update
+
+  # validates :address, presence: true, on: :update
+
+  # validates :small_desc,length: { in: 30..240 }
+  # validates :github_link, format: { with: %r/(github.com)\/(?<handler>\w+)\z/, message: "Must be a full GitHub link" }
   validates :work_auth, inclusion: { in: %w(br us can eu),
-    message: "%{value} is not a valid size" }
+    message: "%{value} is not a valid size" }, on: :update
 end

@@ -16,5 +16,4 @@ class User < ApplicationRecord
     Company.create!(user: self) if role == 'company'
     Candidate.create!(user: self) if role == 'candidate'
   end
-
 end
