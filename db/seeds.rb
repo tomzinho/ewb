@@ -21,9 +21,9 @@ puts "Creating new Users"
     email:        Faker::Internet.email,
     password:     "supersenha",
     password_confirmation: "supersenha",
-    first_name:   Faker::Name.name,
-    last_name:    Faker::Name.unique.name,
-    phonenumber:  Faker::PhoneNumber.phone_number
+    # first_name:   Faker::Name.name,
+    # last_name:    Faker::Name.unique.name,
+    # phonenumber:  Faker::PhoneNumber.phone_number
     )
   end
 
@@ -33,73 +33,77 @@ candidates = User.first(5)
 companies = User.last(5)
 
 candidates.each do |candidate|
-  candidate.role
+  candidate.role = 0
+  candidate.save
+end
+
+companies.each do |company|
+  company.role = 1
+  company.save
 end
 
 
 # candidates ------------------------------------------------------------
 w_auths = %w(br us can eu)
 
-puts "Creating new Candidates"
-10.times do
-  candidate = Candidate.new(
-    small_desc:   Faker::Lorem.paragraph(sentence_count: 20),
-    github_link:  "github.com/#{Faker::Internet.username}",
-    address:      Faker::Address.street_address,
-    work_auth:    w_auths.sample,
-  )
-  Candidate.save!
+puts "Describing the candidates"
+
+candidates.each do |candidate|
+  candidate.small_desc:   Faker::Lorem.paragraph(sentence_count: 20)
+  candidate.github_link:  "github.com/#{Faker::Internet.username}"
+  candidate.address:      Faker::Address.street_address
+  candidate.work_auth:    w_auths.sample
+  candidate.save!
 end
 
 
 # campanies -----------------------------------------------------------
-puts "Creating new Companies"
-10.times do
-  company = Company.new(
-    website:       Faker::Internet.url,
-    facebook_link: Faker::Internet.domain_name(subdomain: true, domain: "facebook"),
-    twitter_link:  Faker::Internet.domain_name(subdomain: true, domain: "twitter"),
-    # logo:        # cloudinary?
-    # banner:      # cloudinary?
-    cnpj:          Faker::Number.number(digits: 14)
-    address:       "#{Faker::Address.street_address}, #{Faker::Address.city}",
-    # latitude:    # ?
-    # longitude:   # ?
-    term_of_use:   Faker::Boolean.boolean(true_ratio: 0.2),
-    # source:      # ?
-    )
-    Company.save!
+puts "Describing the Companies"
+
+companies.eachs do |company|
+  name = Faker::Company.name
+  company.website:       Faker::Internet.url,
+  company.facebook_link: "www.facebook.com/#{name}"
+  company.twitter_link:  "https://twitter.com//#{name}"
+  company.cnpj:          Faker::Number.number(digits: 14)
+  company.address:       Faker::Address.street_address
+  # company.logo:        # cloudinary?
+  # company.banner:      # cloudinary?
+  company.term_of_use:   true
+  company.source:        ["friends", "Google", "Linkedin", "Facebook"].sample
+  company.save!
 end
 
 # jobs -----------------------------------------------------------
 puts "Creating new Jobs"
+
 10.times do
-  job = Job.new(
-    # company_id:  # ?
-    title:         Faker::Lorem.sentence(word_count: 3),
-    description:   Faker::Lorem.sentence(word_count: 20),
-    location:      "#{Faker::Address.street_address}, #{Faker::Address.city}",
-    # latitude:    # ?
-    # longitude:   # ?
-    availability:  Faker::Boolean.boolean(true_ratio: 0.2)
+  company_job =      companies.sample
+  Job.create!(
+  company_id:    company_job.id
+  title:         Faker::Lorem.sentence(word_count: 3)
+  description:   Faker::Lorem.sentence(word_count: 20)
+  location:      company_job.address
+  status:        true
   )
-  Job.save!
 end
 
 
 # resumes -----------------------------------------------------------
 puts "Creating new Resumes"
-10.times do
-  resume = Resume.new(
-    # candidate_id:  #?
-    resume_language: Faker::Educator.campus,
-    description:     Faker::Lorem.sentence(word_count: 20),
-    education:       Faker::University.name,
-    skills:          Faker::Lorem.sentence(word_count: 10),
-    experience:      Faker::Lorem.sentence(word_count: 10),
+
+candidate.each do |candidate|
+  Resume.create!(
+    candidate_id:    candidate.id
+    resume_language: "english"
+    description:     Faker::Lorem.sentence(word_count: 20)
+    education:       Faker::University.name
+    skills:          "Communication, Teamwork, Problem solving, Initiative and enterprise, Planning and organising, Self-management, Learning"
+    experience:      Faker::Lorem.sentence(word_count: 10)
     # video:         # cloudinary?
   )
-  Resume.save!
 end
 
 puts 'Finished!'
+
+
