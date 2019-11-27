@@ -7,16 +7,15 @@ class Company < ApplicationRecord
 
   mount_uploader :photo, PhotoUploader
 
-  # validates :website
-  # validates :facebook_link
-  # validates :twitter_link
-  # validates :logo
-  # validates :banner
-  validates :cnpj, numericality: { only_integer: true }
-  validates :address, presence: true
-  # validates :latitude
-  # validates :longitude
-  validates :term_of_use, acceptance: { message: 'must be abided' }
-  # validates :source
-
+  # validates :website, on: :update
+  # validates :facebook_link, on: :update
+  # validates :twitter_link, on: :update
+  # validates :logo, on: :update
+  # validates :banner, on: :update
+  validates :cnpj, numericality: { only_integer: true }, on: :update
+  # validates :address, presence: true, on: :update
+  # validates :latitude, on: :update
+  # validates :longitude, on: :update
+  # validates :term_of_use, acceptance: { message: 'must be abided' }, on: :update
+  # validates :source, on: :update
 end
