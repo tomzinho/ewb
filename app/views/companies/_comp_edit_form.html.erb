@@ -1,0 +1,19 @@
+<%= simple_form_for @company do |f| %>
+  <%= f.input :website %>
+  <%= f.input :facebook_link, label: 'Facebook?', input_html: { class: 'form-control form-inline' } %>
+  <%= f.input :twitter_link, label: 'Twitter' %>
+  <div class="row">
+    <div class="col-6">
+      <%= f.input :logo %>
+      <%= f.input :logo_cache, as: :hidden %>
+    </div>
+    <div class="col-6">
+      <%= f.input :banner %>
+      <%= f.input :banner_cache, as: :hidden %>
+    </div>
+  </div>
+      <%= f.input :cnpj %>
+  <%= f.input :address %>
+  <%= f.input :source, label: 'How did you hear about us?' %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
