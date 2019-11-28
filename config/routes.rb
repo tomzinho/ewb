@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
+  root to: 'pages#home'
 
   resources :candidates, only: %i[edit update]
-  resources :companies, only: %i[edit update]
+  resources :companies, only: %i[show edit update]
+  resources :jobs, only: %i[new create]
 
-  root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
