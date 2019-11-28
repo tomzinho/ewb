@@ -1,4 +1,5 @@
 class JobsController < ApplicationController
+
   def new
     if current_user.company.blank?
       redirect_to root_path, alert: 'Operation Invalid'
@@ -22,6 +23,10 @@ class JobsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @job = Job.find(params[:id])
   end
 
   private
