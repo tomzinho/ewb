@@ -2,5 +2,15 @@
   <%= f.input :small_desc %>
   <%= f.input :address %>
   <%= f.input :github_link %>
+
+ <p> Work Authorizations </p>
+  <%= f.input :workauth_bra, label:  "Brasil" %>
+  <%= f.input :workauth_usa, label:  "United States" %>
+  <%= f.input :workauth_eu, label:  "European Union" %>
+  <%= f.input :workauth_can, label: "Canada" %>
+  <%= f.input :workauth_aus, label: "Australia" %>
+  <%= f.input :workauth_gb, label:  "Great Britain" %>
+
   <%= f.submit 'Save' %>
 <% end %>
+
