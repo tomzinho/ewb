@@ -3,11 +3,14 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-
   def configure_permitted_parameters
     # For additional fields in app/views/devise/registrations/new.html.erb
     devise_parameter_sanitizer.permit(:sign_up, keys: [:role])
   end
 
+#def after_sign_in_path_for(resource)
+#  edit_candidate_path(resource.candidate) if resource.role == 'candidate'
+  #edit_company_path(resource.company) if resource.role == 'company'
+#edit_candidate_path
 
 end
