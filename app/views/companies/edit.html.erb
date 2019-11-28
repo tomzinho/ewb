@@ -1,0 +1,12 @@
+<div class="container">
+  <div>
+    <p>Olá <span><%= @company.user.email %></span></p>
+  </div>
+
+  <%= link_to "Post a new job", new_job_path %>
+
+  <div class="col-6 offset-3 mb-5">
+    <%= render 'comp_edit_form' %>
+  </div>
+
+</div>

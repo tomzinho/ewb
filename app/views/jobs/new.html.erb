@@ -1,0 +1,14 @@
+<h1>Create a job offer</h1>
+<p>Please insert all role specifications</p>
+
+<%= simple_form_for @job, url: jobs_path(@job) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :location %>
+  <%= f.button :submit, class: "btn-primary" %>
+  <%= f.button :button, "Clean form", type: "reset", class: "btn-outline-secondary" %>
+<% end %>
+
+<%= link_to "<", edit_company_path(@company) %>
+
+

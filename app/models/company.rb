@@ -5,7 +5,8 @@ class Company < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
-  mount_uploader :photo, PhotoUploader
+  mount_uploader :logo, PhotoUploader
+  mount_uploader :banner, PhotoUploader
 
   # validates :website, on: :update
   # validates :facebook_link, on: :update
