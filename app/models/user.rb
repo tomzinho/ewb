@@ -6,6 +6,9 @@ class User < ApplicationRecord
 
   enum role: %i[candidate company]
 
+  has_one :candidate
+  has_one :company
+
   after_create :set_candidate_or_company
 
   private
@@ -14,4 +17,5 @@ class User < ApplicationRecord
     Company.create!(user: self) if role == 'company'
     Candidate.create!(user: self) if role == 'candidate'
   end
+
 end
