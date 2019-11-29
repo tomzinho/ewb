@@ -1,0 +1,52 @@
+<div class="container mt-5">
+  <div class="row">
+
+    <div class="col comp-logo">
+      <% if @job.company.logo.to_s.empty? %>
+        <%= image_tag('logo-default.png', class: "img-fluid") %>
+      <% else %>
+        <%= image_tag(@job.company.logo_url,  class: "img-fluid") %>
+      <% end %>
+    </div>
+
+    <div class="col-3 job-details">
+      <p id="company-name"><%= @job.company.name %> </p>
+      <p><i class="fas fa-check"></i> <%= @job.title %></p>
+      <!-- Looks at the description to eomployment type -->
+      <% if @job.description.match?(/CLT/i) %>
+        <p><i class="fas fa-check"></i>CLT</p>
+      <% elsif @job.description.match?(/PJ/i) %>
+        <p><i class="fas fa-check"></i>PJ</p>
+      <% else %>
+        <p></p>
+      <% end %>
+      <p><i class="fas fa-check"></i> <%= @job.location %></p>
+      <!-- Looks at the description to job level -->
+      <% if @job.description.match?(/júnior/i) %>
+        <p>Júnior</p>
+      <% elsif @job.description.match?(/pleno/i) %>
+        <p>Pleno</p>
+      <% elsif @job.description.match?(/sênior/i) %>
+        <p>Sênior</p>
+      <% else %>
+        <p></p>
+      <% end %>
+    </div>
+
+    <div class="col-6 job-desc">
+      <div>
+        <h3><%= @job.title %></h3>
+      </div>
+      <div>
+        <%= @job.description %>
+      </div>
+    </div>
+
+  </div>
+  <div class="row mt-4 ">
+    <div class="col-12 d-flex flex-row-reverse">
+      <%= link_to "apply now", company_path(@job.company), class: "btn btn-apply" %>
+    </div>
+  </div>
+</div>
+<%= image_tag('job-show.png', class: 'bg') %>
