@@ -1,0 +1,9 @@
+<%= simple_form_for @resume do |f| %>
+
+  <%= f.input :resume_language, collection: Resume::LANGUAGE_LIST, as: :select %>
+
+  <%= f.input :education %>
+  <%= f.input :skills %>
+  <%= f.input :experience %>
+
+<% end %>

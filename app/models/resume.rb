@@ -1,6 +1,8 @@
 class Resume < ApplicationRecord
   belongs_to :candidate
 
+  LANGUAGE_LIST = ["English", "Spanish", "Portuguese", "French", "German", "Japanese", "Chinese"]
+
   mount_uploader :photo, PhotoUploader
 
   validates :candidate_id, presence: true
