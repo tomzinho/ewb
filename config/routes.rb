@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
+  get 'dashboard',to: 'companies#dashboard'
   resources :candidates, only: %i[edit update]
-  resources :companies, only: %i[show edit update]
+  resources :companies, only: %i[show edit update dashboard]
   resources :jobs, only: %i[show new create]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
