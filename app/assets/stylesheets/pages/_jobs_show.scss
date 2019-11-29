@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+#company-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: .1rem;
+}
+
+.comp-logo {
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.job-details {
+  padding-top: 1rem;
+  p {
+    padding-left: .5rem;
+  }
+  background-color: white;
+  box-shadow: -5px 10px 8px rgba(25,11,118, .1);
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.job-desc {
+  padding: 1rem 2rem;
+  background-color: #538BCB;
+  color: white;
+  height: 50vh;
+  h3{
+    padding-bottom: 1.8rem;
+  }
+}
+
+.btn-apply{
+  border-radius: 20px;
+  background-color: #fee310;
+  color:#0412BA;
+  padding: 5px 20px;
+}
+
+.bg{
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
