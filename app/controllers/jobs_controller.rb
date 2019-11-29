@@ -7,7 +7,7 @@ class JobsController < ApplicationController
     end
 
     @job = Job.new
-    @company = current_user
+      @company = current_user
   end
 
   def create
