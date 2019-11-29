@@ -9,6 +9,10 @@ class CompaniesController < ApplicationController
     redirect_to edit_company_path(@company)
   end
 
+  def dashboard
+    @company = Company.find(params[:id])
+  end
+
   private
 
   def company_params
