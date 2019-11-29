@@ -19,7 +19,7 @@ class JobsController < ApplicationController
     @job = Job.new(job_params)
     @job.company = current_user.company
     if @job.save
-      redirect_to root
+      redirect_to dashboard_path(@job.company)
     else
       render :new
     end
