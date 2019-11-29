@@ -11,8 +11,9 @@ def update
 end
 
 private
+
 def candidate_params
   params.require(:candidate).permit(:small_desc, :address, :github_link)
-  end
+end
 
 end

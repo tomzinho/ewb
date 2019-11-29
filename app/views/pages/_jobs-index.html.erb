@@ -1,0 +1,9 @@
+<ul>
+  <% @jobs.each do |job| %>
+    <li>
+      <%= link_to job_path(job)  do %>
+        <%= job.title %> - <%= job.id  %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
