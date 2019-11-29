@@ -1,0 +1,54 @@
+.company-banner {
+  width: 100vw;
+  height: auto;
+  // height: 110vh;
+  image-size: cover;
+  img {
+    width: 100vw;
+  }
+}
+
+.company-logo {
+  margin-top: -50px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.about {
+  padding: 5px 200px 5px 200px;
+
+  h1 {
+    font-family: "Nunito", Helvetica, Sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: left;
+    color: #48328B;
+    line-height: 3.5rem;
+  }
+
+  p {
+    color: #48328B;
+    font-size: 1.2rem;
+    text-align: left;
+    font-family: "Space Mono", monospace;
+  }
+
+  .btn-jobs {
+    background-color: #48328B;
+    color: #ffffff;
+    padding: 7px;
+    font-size: 1.0rem;
+    text-align: center;
+    font-family: "Space Mono", monospace;
+    border-radius: 15px;
+    margin-top: 20px;
+  }
+}
