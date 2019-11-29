@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  get '/companies/:id/dashboard', to: 'companies#dashboard'
+  get '/companies/:id/dashboard', to: 'companies#dashboard', as: 'dashboard'
   resources :candidates, only: %i[edit update]
   resources :companies, only: %i[show edit update dashboard]
   resources :jobs, only: %i[show new create]
