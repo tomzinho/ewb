@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :candidates, only: %i[edit update]
   resources :companies, only: %i[show edit update]
-  resources :jobs, only: %i[new create]
+  resources :jobs, only: %i[show new create]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
