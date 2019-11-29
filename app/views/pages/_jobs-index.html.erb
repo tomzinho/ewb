@@ -1,5 +1,9 @@
 <ul>
   <% @jobs.each do |job| %>
-    <li><a href="#"> <%= job.title %> - <%= job.id  %></a></li>
+    <li>
+      <%= link_to job_path(job)  do %>
+        <%= job.title %> - <%= job.id  %>
+      <% end %>
+    </li>
   <% end %>
 </ul>
