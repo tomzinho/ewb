@@ -1,2 +1,116 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="banner">
+  <div class="header1 d-flex align-items-start">
+    <div class="col-3 offset-1">
+        <h1><span class="first_line">pitch it</span><br>
+        and show us <br> the
+        <span class="yellow_title">real you</span></h1>
+        <p class="btn-banner">discover how it works</p>
+    </div>
+  </div>
+
+
+  <div class="row cards-items">
+    <div class="col-3">
+      <div class="cards-offers">
+        <div class="offer-h1">
+          Job offer name
+        </div>
+        <div class="offer-h2">
+          COMPANY
+        </div>
+        <div class="offer-p">
+          Description, description, description, description, description, description, description, description...
+        </div>
+        <div class="btn btn-apply-now">
+          Apply now
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="cards-offers">
+        <div class="offer-h1">
+          Job offer name
+        </div>
+        <div class="offer-h2">
+          COMPANY
+        </div>
+        <div class="offer-p">
+          Description, description, description, description, description, description, description, description...
+        </div>
+        <div class="btn btn-apply-now">
+          Apply now
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="cards-offers">
+        <div class="offer-h1">
+          Job offer name
+        </div>
+        <div class="offer-h2">
+          COMPANY
+        </div>
+        <div class="offer-p">
+          Description, description, description, description, description, description, description, description...
+        </div>
+        <div class="btn btn-apply-now">
+          Apply now
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="cards-offers">
+        <div class="offer-h1">
+          Job offer name
+        </div>
+        <div class="offer-h2">
+          COMPANY
+        </div>
+        <div class="offer-p">
+          Description, description, description, description, description, description, description, description...
+        </div>
+        <div class="btn btn-apply-now">
+          Apply now
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="amarelo">
+    <div class="col-6">
+   <%= form_tag jobs_path, method: :get do %>
+     <%= text_field_tag :query,
+       params[:query],
+       class: "form-control",
+       placeholder: "Find a job offer"
+     %>
+     <%= submit_tag "Search", class: "btn btn-primary" %>
+   <% end %>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="row-esquerdo">
+  </div>
+  <div class="row-direito">
+
+    <h1>Contact us</h1>
+    <h2><i class="fas fa-envelope"></i> E-mail</h2>
+    <p>email@email.com</p>
+
+    <h2><i class="fas fa-phone"></i> Phone</h2>
+    <p>3333-3333</p>
+
+    <h2><i class="fas fa-map-marker-alt"></i> Address</h2>
+    <p>Mourato Coelho Street, 1404 – Vila Madalena</p>
+
+  </div>
+</div>
