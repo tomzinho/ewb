@@ -5,8 +5,12 @@ class CompaniesController < ApplicationController
 
   def update
     @company = Company.find(params[:id])
-    @company = Company.update(company_params)
+    @company.update(company_params)
     redirect_to edit_company_path(@company)
+  end
+
+  def dashboard
+    @company = Company.find(params[:id])
   end
 
   private
