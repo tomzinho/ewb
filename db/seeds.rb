@@ -1,15 +1,15 @@
-puts "Removing applies..."
-  Apply.destroy_all
-puts "Removing resumes database..."
-  Resume.destroy_all
-puts "Removing candidates database..."
-  Candidate.destroy_all
-puts "Removing jobs database..."
-  Job.destroy_all
-puts "Removing companies database..."
-  Company.destroy_all
-puts "Removing users database..."
-  User.destroy_all
+#puts "Removing applies..."
+#  Apply.destroy_all
+# puts "Removing resumes database..."
+#   Resume.destroy_all
+# puts "Removing candidates database..."
+#   Candidate.destroy_all
+# puts "Removing jobs database..."
+#   Job.destroy_all
+# puts "Removing companies database..."
+#   Company.destroy_all
+# puts "Removing users database..."
+#   User.destroy_all
 
 
 # users ----------------------------------------------------------------

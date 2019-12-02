@@ -1,6 +1,6 @@
 class Candidate < ApplicationRecord
   belongs_to :user
-  has_many :resumes , dependent: :destroy
+  has_many :resumes, dependent: :destroy
   has_many :applies, dependent: :destroy
   mount_uploader :photo, PhotoUploader
 
