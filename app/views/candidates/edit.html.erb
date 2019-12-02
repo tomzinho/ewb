@@ -1,13 +1,11 @@
 <%= simple_form_for @candidate do |f| %>
 
-<label class="btn btn-primary">
-  Add a file!
-  <span style="display:none;">
-    <%= f.photo :image, required: true, multiple: true, name: 'picture' %>
-  </span>
-</label>
+<p> Photo and Personal Information</p>
 
-  <%= f.input :small_desc %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+
+  <%= f.input :small_desc, label: "Short bio" %>
   <%= f.input :address %>
   <%= f.input :github_link %>
 
