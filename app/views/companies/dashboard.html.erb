@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row mt-4">
+    <h1><%= @company.name %></h1>
+
+    <p class="Active jobs offers"></p>
+
+  </div>
+  <div class="row mt-4">
+    <% @company.jobs.each do |job| %>
+      <div class="company-job-card">
+        <p class="company-job-card-title"><strong><%= job.title %></strong></p>
+        <p class=""><%= job.description %></p>
+        <p class="date">Create at <%= job.created_at.to_date %> </p>
+      </div>
+    <% end %>
+  </div>
+  <div class="row mt-2 d-flex justify-content-end">
+    <%= link_to "Create a new Job", new_job_path, class: "btn btn-new-job" %>
+  </div>
+
+</div>
+
