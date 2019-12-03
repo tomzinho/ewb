@@ -1,3 +1,50 @@
+.btn-apply-now {
+  background-color: #48328B;
+  color: #ffffff;
+  padding: 7px 12px 7px 12px;
+  font-size: 1.0rem;
+  text-align: center;
+  font-family: "Space Mono", monospace;
+  border-radius: 20px;
+  margin-top: 30px;
+
+  &:hover {
+    background-color: #9BDEDE;
+  }
+}
+
+
+.btn-search {
+  background-color: #0B1ACE;
+  color: #ffffff;
+  font-family: "Space Mono", monospace;
+  border-radius: 20px;
+  padding: 7px 12px 7px 12px;
+  font-size: 1.0rem;
+  text-align: center;
+  margin-left: 12px;
+
+  &:hover {
+    background-color: #9BDEDE;
+  }
+}
+
+
+.btn-banner {
+  background-color: #9BDEDE;
+  color: #1E1544;
+  padding: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: "Space Mono", monospace;
+  border-radius: 30px;
+  max-width: 25rem;
+
+  &:hover {
+    background-color: #FFFFFF;
+  }
+}
+
 .roundedTwo {
   width: 28px;
   height: 28px;
