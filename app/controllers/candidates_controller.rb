@@ -12,6 +12,6 @@ end
 
 private
 def candidate_params
-  params.require(:candidate).permit(:photo, :small_desc, :address, :github_link, :workauth_bra, :workauth_usa, :workauth_eu, :workauth_can, :workauth_aus, :workauth_gb)
+  params.require(:candidate).permit(:photo, :photo_cache, :small_desc, :address, :github_link, :workauth_bra, :workauth_usa, :workauth_eu, :workauth_can, :workauth_aus, :workauth_gb)
 end
 end
