@@ -10,9 +10,13 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:role])
   end
 
-  # def after_sign_in_path_for(resource)
-  #   redirect_to pages_role_path
-  # end
+  def after_sign_in_path_for(resource)
+    if current_user.role == nil
+      request.env['omniauth.origin'] || stored_location_for(resource) || role_path(current_user)
+    else
+      request.env['omniauth.origin'] || stored_location_for(resource) || root_path
+    end
+  end
 
 #def after_sign_in_path_for(resource)
 #  edit_candidate_path(resource.candidate) if resource.role == 'candidate'
