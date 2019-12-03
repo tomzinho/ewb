@@ -61,18 +61,18 @@ end
 puts "Describing the Companies"
 
 companies.each do |company|
-  name = Faker::Company.name
   Company.create!(
     user_id:       company.id,
     website:       Faker::Internet.url,
-    facebook_link: "www.facebook.com/#{name}",
-    twitter_link:  "https://twitter.com//#{name}",
+    name:          Faker::Company.name,
+    # facebook_link: "www.facebook.com/#{name}",
+    # twitter_link:  "https://twitter.com//#{name}",
     # logo:        # cloudinary?,
     # banner:      # cloudinary?,
     cnpj:          Faker::Number.number(digits: 6),
     address:       Faker::Address.street_address,
     term_of_use:   true,
-    source:        ["friends", "Google", "Linkedin", "Facebook"].sample
+    source:        ["friends", "Google", "Linkedin", "Facebook"].sample,
   )
 end
 

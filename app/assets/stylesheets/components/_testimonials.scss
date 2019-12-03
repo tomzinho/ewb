@@ -1,5 +1,7 @@
-body {
- background: linear-gradient(120deg, #48328B 0%, #0B1ACE 100%)
+.background-testimonials {
+ background: linear-gradient(120deg, #48328B 0%, #0B1ACE 100%);
+ height: 480px;
+ display: flex;
 }
 
 .box-white {
@@ -8,8 +10,8 @@ body {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.58);
     border-radius: 16px;
     margin-top: 50px;
-    margin-bottom: 50px;
-    padding: 20px 10px 10px 10px;
+    margin-bottom: 100px;
+    padding: 20px 10px 0px 0px;
     z-index: 2;
 }
 

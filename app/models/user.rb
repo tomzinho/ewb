@@ -4,12 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_one :company
-  has_one :condidate
+  has_one :candidate
 
   enum role: %i[candidate company]
 
-  has_one :candidate
-  has_one :company
+
 
   after_create :set_candidate_or_company
 
