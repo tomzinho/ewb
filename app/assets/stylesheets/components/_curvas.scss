@@ -4,7 +4,28 @@
   // margin-block-end: 1em;
   // margin-inline-start: 40px;
   // margin-inline-end: 40px;
+  // position: absolute;
+  // z-index: 1;
   position: absolute;
-  z-index: 1;
+  transform: translate(2vw, 2vh);
+}
+
+.curva-esq {
+  position: absolute;
+  transform: translate(-46vw, -9vh);
+  index: -1;
+}
+
+
+.curva-dir {
+  position: absolute;
+  transform: translate(45vw, -9vh);
+  index: -1;
+}
+
+.curvas-recruiter {
+  transform: translate(-25vw, -19vh);
 
 }
+
+
