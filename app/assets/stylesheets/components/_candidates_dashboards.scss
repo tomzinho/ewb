@@ -1,0 +1,31 @@
+$bg-color: #6FAEF7;
+
+.candiate-resume-card{
+  display: flex;
+  font-family: "Nunito", Helvetica, Sans-serif;
+  // justify-content: flex-start;
+  flex-direction: column;
+  height:200px;
+  width: 250px;
+  overflow: hidden;
+
+  padding: 8px 16px;
+  margin: 4px;
+
+  color: white;
+  background-color: $bg-color;
+
+  p{
+    font-family: "Space mono", monospace;
+  }
+  .candidate-resume-card-language{
+    font-size: 1.2rem;
+  }
+}
+.btn-new-resume{
+  font-family: "Nunito", Helvetica, Sans-serif;
+  background-color: #48328B;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 16px;
+}

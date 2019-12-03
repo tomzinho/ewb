@@ -6,9 +6,6 @@
    <p class="btn-banner">discover how it works</p>
   </div>
 </div>
-
-<!-- oi -->
-
   <div class="container-home">
     <div class="row container-flex">
       <% @jobs.each do |job| %>
@@ -31,6 +28,8 @@
       <% end %>
     </div>
   </div>
+
+  <%= cl_video_tag Resume.last.video_url, controls: true %>
 
 
   <div class="yellow-box">
