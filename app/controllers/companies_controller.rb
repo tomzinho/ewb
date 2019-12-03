@@ -1,4 +1,4 @@
-class CompaniesController < ApplicationController
+  class CompaniesController < ApplicationController
   def edit
     @company = Company.find(params[:id])
   end
