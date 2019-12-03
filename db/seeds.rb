@@ -1,15 +1,15 @@
-puts "Removing applies..."
-  Apply.destroy_all
-puts "Removing resumes database..."
-  Resume.destroy_all
-puts "Removing candidates database..."
-  Candidate.destroy_all
-puts "Removing jobs database..."
-  Job.destroy_all
-puts "Removing companies database..."
-  Company.destroy_all
-puts "Removing users database..."
-  User.destroy_all
+#puts "Removing applies..."
+#  Apply.destroy_all
+# puts "Removing resumes database..."
+#   Resume.destroy_all
+# puts "Removing candidates database..."
+#   Candidate.destroy_all
+# puts "Removing jobs database..."
+#   Job.destroy_all
+# puts "Removing companies database..."
+#   Company.destroy_all
+# puts "Removing users database..."
+#   User.destroy_all
 
 
 # users ----------------------------------------------------------------
@@ -61,18 +61,18 @@ end
 puts "Describing the Companies"
 
 companies.each do |company|
-  name = Faker::Company.name
   Company.create!(
     user_id:       company.id,
     website:       Faker::Internet.url,
-    facebook_link: "www.facebook.com/#{name}",
-    twitter_link:  "https://twitter.com//#{name}",
+    name:          Faker::Company.name,
+    # facebook_link: "www.facebook.com/#{name}",
+    # twitter_link:  "https://twitter.com//#{name}",
     # logo:        # cloudinary?,
     # banner:      # cloudinary?,
     cnpj:          Faker::Number.number(digits: 6),
     address:       Faker::Address.street_address,
     term_of_use:   true,
-    source:        ["friends", "Google", "Linkedin", "Facebook"].sample
+    source:        ["friends", "Google", "Linkedin", "Facebook"].sample,
   )
 end
 
