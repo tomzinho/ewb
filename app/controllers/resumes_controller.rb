@@ -7,7 +7,7 @@ class ResumesController < ApplicationController
     end
 
     @resume = Resume.new
-    @candidate = current_user.candidate
+      @candidate = current_user
   end
 
   def create
@@ -19,7 +19,7 @@ class ResumesController < ApplicationController
     @resume = Resume.new(resume_params)
     @resume.candidate = current_user.candidate
     if @resume.save
-      redirect_to root
+      redirect_to candidate_dashboard_path(@resume.candidate)
     else
       render :new
     end
