@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users,
+      controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root to: 'pages#home'
 
+  get '/role/:id', to: 'pages#role', as: 'role'
+  patch '/role/:id', to: 'pages#role_update'
   get '/candidates/:id/dashboard', to: 'candidates#dashboard', as: 'candidate_dashboard'
   get '/companies/:id/dashboard', to: 'companies#dashboard', as: 'company_dashboard'
 
