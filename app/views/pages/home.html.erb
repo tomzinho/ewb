@@ -1,115 +1,126 @@
 <div class="banner">
-  <div class="header1 d-flex align-items-start">
-    <div class="col-3 offset-1">
-        <h1><span class="first_line">pitch it</span><br>
-        and show us <br> the
-        <span class="yellow_title">real you</span></h1>
-        <p class="btn-banner">discover how it works</p>
-    </div>
-  </div>
-
-
-  <div class="row cards-items">
-    <div class="col-3">
-      <div class="cards-offers">
-        <div class="offer-h1">
-          Job offer name
-        </div>
-        <div class="offer-h2">
-          COMPANY
-        </div>
-        <div class="offer-p">
-          Description, description, description, description, description, description, description, description...
-        </div>
-        <div class="btn btn-apply-now">
-          Apply now
-        </div>
-      </div>
-    </div>
-
-    <div class="col-3">
-      <div class="cards-offers">
-        <div class="offer-h1">
-          Job offer name
-        </div>
-        <div class="offer-h2">
-          COMPANY
-        </div>
-        <div class="offer-p">
-          Description, description, description, description, description, description, description, description...
-        </div>
-        <div class="btn btn-apply-now">
-          Apply now
-        </div>
-      </div>
-    </div>
-
-    <div class="col-3">
-      <div class="cards-offers">
-        <div class="offer-h1">
-          Job offer name
-        </div>
-        <div class="offer-h2">
-          COMPANY
-        </div>
-        <div class="offer-p">
-          Description, description, description, description, description, description, description, description...
-        </div>
-        <div class="btn btn-apply-now">
-          Apply now
-        </div>
-      </div>
-    </div>
-
-    <div class="col-3">
-      <div class="cards-offers">
-        <div class="offer-h1">
-          Job offer name
-        </div>
-        <div class="offer-h2">
-          COMPANY
-        </div>
-        <div class="offer-p">
-          Description, description, description, description, description, description, description, description...
-        </div>
-        <div class="btn btn-apply-now">
-          Apply now
-        </div>
-      </div>
-    </div>
+ <div class="container">
+     <h1><span class="first_line">pitch it<br>
+     and show us <br> the</span>
+     <span class="yellow_title">real you</span></h1>
+   <p class="btn-banner">discover how it works</p>
   </div>
 </div>
 
+  <div class="container-home">
+    <div class="row container-flex">
+      <% @jobs.each do |job| %>
+        <div class="col-3">
+          <div class="cards-offers">
+            <div class="offer-h1">
+             <%= job.title  %>
+            </div>
+            <div class="offer-h2">
+              <%= job.company.name  %>
+            </div>
+            <div class="offer-p">
+              <%= job.description.first(90) + "..."  %>
+            </div>
+            <div class="btn btn-apply-now">
+              Apply now
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
 
-<div class="row">
-  <div class="amarelo">
-    <div class="col-6">
-   <%= form_tag jobs_path, method: :get do %>
+
+  <div class="yellow-box">
+   <%= form_tag jobs_path, class: "form-inline", method: :get do %>
      <%= text_field_tag :query,
        params[:query],
-       class: "form-control",
+       class: "form-control, search-bar",
        placeholder: "Find a job offer"
      %>
-     <%= submit_tag "Search", class: "btn btn-primary" %>
+
+     <%= submit_tag "Search", class: "btn btn-search" %>
    <% end %>
   </div>
+
+
+<figure class="curvas">
+  <%= image_tag('curvas.png') %>
+</figure>
+
+
+
+<!-- testimonials -->
+
+
+<div class='box-white mx-auto mt-5 col-md-10 col-11'>
+    <div class="t_testimonials">Testimonials</div>
+    <div class="row" style="justify-content: center">
+        <div class="card col-md-3 col-11">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile mb-4 mt-3"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1574583336/AAA/4.jpg"> </div>
+                    <div class="card-subtitle">
+                        <p> <small class="text-muted"> <i class="fas fa-quote-left"></i> I expected anything less than perfect for the Tongues Without Borders experts. <i class="fas fa-quote-left fa-flip-horizontal"></i> </small> </p>
+                    </div>
+                    <div class="card-body company"> <i class="fab fa-ebay fa-2x"></i> <small class="intro text-muted">Sam Diago, Recruiter</small> </div>
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 col-11 second">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile mb-4 mt-3"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1574583319/AAA/3.jpg"> </div>
+                    <div class="card-subtitle">
+                        <p> <small class="text-muted"> <i class="fas fa-quote-left "></i> I really enjoyed working with Tongues Without Borders, they are Group of Professionals and they know what they're doing <i class="fas fa-quote-left fa-flip-horizontal"></i> </small> </p>
+                    </div>
+                    <div class="card-body company"> <i class="fab fa-amazon fa-2x"></i><small class="intro text-muted">Monty Jones, Software Developer</small> </div>
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-3 col-11 third">
+            <div class="card-content">
+                <div class="card-body p-0">
+                    <div class="profile mb-4 mt-3"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1574583246/AAA/2.jpg"> </div>
+                    <div class="card-subtitle">
+                        <p> <small class="text-muted"> <i class="fas fa-quote-left"></i> I've just found the perfect player for my team! <i class="fas fa-quote-left fa-flip-horizontal"></i> </small> </p>
+                    </div>
+                    <div class="card-body company"> <i class="fab fa-yelp fa-2x"></i><small class="intro text-muted">John Tim, Tech Support</small> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- final testimonials -->
+
+
+
+<div class="infos">
+  <div class="mapa">
+    <%= image_tag('world.jpg') %>
+  </div>
+
+  <div class="blue-box">
+    <div class="texto">
+      <h1>Contact us</h1>
+      <h2><i class="fas fa-envelope"></i> Email</h2>
+      <p>info@tongues-without-borders.com</p>
+
+      <h2><i class="fas fa-phone"></i> Phone</h2>
+      <p>3333-3333</p>
+
+      <h2><i class="fas fa-map-marker-alt"></i> Address</h2>
+      <p>Mourato Coelho Street, 1404 – Vila Madalena</p>
+    </div>
+  </div>
 </div>
 
 
-<div class="row">
-  <div class="row-esquerdo">
-  </div>
-  <div class="row-direito">
 
-    <h1>Contact us</h1>
-    <h2><i class="fas fa-envelope"></i> E-mail</h2>
-    <p>email@email.com</p>
-
-    <h2><i class="fas fa-phone"></i> Phone</h2>
-    <p>3333-3333</p>
-
-    <h2><i class="fas fa-map-marker-alt"></i> Address</h2>
-    <p>Mourato Coelho Street, 1404 – Vila Madalena</p>
-
-  </div>
 </div>
+
+<!-- <footer class="footer">
+<p>&copy; 2019 | Tongues Without Borders</p>
+</footer>
+ -->
