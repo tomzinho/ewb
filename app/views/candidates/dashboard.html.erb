@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row mt-4">
+    <h1><%= @candidate.first_name %></h1>
+
+    <p class="Resumes"></p>
+
+  </div>
+  <div class="row mt-4">
+    <% @candidate.resumes.each do |resume| %>
+      <div class="candidate-resume-card">
+        <p class="candidate-resume-card-title"><strong><%= resume.language %></strong></p>
+        <p class=""><%= resume.description %></p>
+      </div>
+    <% end %>
+  </div>
+  <div class="row mt-2 d-flex justify-content-end">
+    <%= link_to "Create a new Resume", new_resume_path, class: "btn btn-new-resume" %>
+  </div>
+
+</div>
+
