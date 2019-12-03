@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(version: 2019_12_03_123145) do
     t.boolean "workauth_can"
     t.boolean "workauth_gb"
     t.boolean "workauth_aus"
+    t.string "first_name"
+    t.string "last_name"
     t.index ["user_id"], name: "index_candidates_on_user_id"
   end
 

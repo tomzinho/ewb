@@ -5,12 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:linkedin]
   has_one :company
-  has_one :condidate
+  has_one :candidate
 
   enum role: %i[candidate company]
 
-  has_one :candidate
-  has_one :company
+
 
   def self.find_for_linkedin_oauth(auth)
       user_params = auth.slice("provider", "uid")

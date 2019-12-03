@@ -1,0 +1,33 @@
+<%= simple_form_for @candidate do |f| %>
+
+
+
+  <div>
+    <p>Olá <span><%= @candidate.user.email %></span></p>
+  </div>
+
+
+  <% if @candidate.photo.present? %>
+    <%= cl_image_tag @candidate.photo, height: 300, width: 400, crop: :fill %>
+  <% end %>
+
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+
+  <%= f.input :small_desc, label: "Short bio" %>
+  <%= f.input :address %>
+  <%= f.input :github_link %>
+
+ <p> Work Authorizations </p>
+  <%= f.input :workauth_bra, label:  "Brasil" %>
+  <%= f.input :workauth_usa, label:  "United States" %>
+  <%= f.input :workauth_eu, label:  "European Union" %>
+  <%= f.input :workauth_can, label: "Canada" %>
+  <%= f.input :workauth_aus, label: "Australia" %>
+  <%= f.input :workauth_gb, label:  "Great Britain" %>
+
+
+  <%= f.button :submit, class: "btn btn-primary" %>
+
+<% end %>
+
