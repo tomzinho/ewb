@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/companies/:id/dashboard', to: 'companies#dashboard', as: 'dashboard'
   resources :candidates, only: %i[edit update]
   resources :companies, only: %i[show edit update dashboard]
+  resources :resumes
   resources :jobs, only: %i[show new create]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
