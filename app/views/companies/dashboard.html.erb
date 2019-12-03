@@ -1,23 +1,64 @@
-<div class="container">
-  <div class="row mt-4">
-    <h1><%= @company.name %></h1>
+<div class="recruiter-background">
+  <div class="container">
 
-    <p class="Active jobs offers"></p>
-
-  </div>
-  <div class="row mt-4">
-    <% @company.jobs.each do |job| %>
-      <div class="company-job-card">
-        <p class="company-job-card-title"><strong><%= job.title %></strong></p>
-        <p class=""><%= job.description %></p>
-        <p class="date">Create at <%= job.created_at.to_date %> </p>
+    <div class="dashboard-container">
+      <div class="btn btn-recruiter-table">
+        <%= link_to "Create a new Job", new_job_path, class: "btn btn-new-job" %>
       </div>
-    <% end %>
-  </div>
-  <div class="row mt-2 d-flex justify-content-end">
-    <%= link_to "Create a new Job", new_job_path, class: "btn btn-new-job" %>
-  </div>
 
+      <div class="curvas-recruiter">
+        <%= image_tag('curvas2.png') %>
+      </div>
+
+      <section class="recruiter-dashboard">
+        <h1>Dashboard</h1>
+        <div class="tbl-header">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+              <tr>
+                <th>Position</th>
+                <th>Created at</th>
+                <th>Description</th>
+                <th>Candidates</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-content">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+              <% @company.jobs.each do |job| %>
+                <tr>
+                  <td><%= job.title %></td>
+                  <td><%= job.created_at %></td>
+                  <td><%= job.description %> </td>
+                  <td> <%= job.applies.count %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+
+
+        </div>
+      </section>
+
+    </div>
+  </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
