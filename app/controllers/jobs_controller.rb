@@ -1,4 +1,4 @@
-class JobsController < ApplicationController
+  class JobsController < ApplicationController
 
   def new
     if current_user.company.blank?
@@ -19,7 +19,7 @@ class JobsController < ApplicationController
     @job = Job.new(job_params)
     @job.company = current_user.company
     if @job.save
-      redirect_to dashboard_path(@job.company)
+      redirect_to company_dashboard_path(@job.company)
     else
       render :new
     end

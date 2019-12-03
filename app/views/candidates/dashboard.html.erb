@@ -1,14 +1,12 @@
 <div class="container">
-  <div class="row mt-4">
-    <h1><%= @candidate.first_name %></h1>
 
-    <p class="Resumes"></p>
+   <h1><%= @candidate.small_desc %></h1>
 
-  </div>
+</div>
   <div class="row mt-4">
     <% @candidate.resumes.each do |resume| %>
       <div class="candidate-resume-card">
-        <p class="candidate-resume-card-title"><strong><%= resume.language %></strong></p>
+        <p class="candidate-resume-language"><strong><%= resume.resume_language %></strong></p>
         <p class=""><%= resume.description %></p>
       </div>
     <% end %>

@@ -1,5 +1,12 @@
 <%= simple_form_for @candidate do |f| %>
 
+
+
+  <div>
+    <p>Olá <span><%= @candidate.user.email %></span></p>
+  </div>
+
+
   <% if @candidate.photo.present? %>
     <%= cl_image_tag @candidate.photo, height: 300, width: 400, crop: :fill %>
   <% end %>
@@ -18,6 +25,7 @@
   <%= f.input :workauth_can, label: "Canada" %>
   <%= f.input :workauth_aus, label: "Australia" %>
   <%= f.input :workauth_gb, label:  "Great Britain" %>
+
 
   <%= f.button :submit, class: "btn btn-primary" %>
 
