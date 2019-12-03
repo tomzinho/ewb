@@ -6,7 +6,8 @@ class PagesController < ApplicationController
     @jobs = Job.last(4)
   end
 
-  def set_role
+  def role
+    @user = current_user
   end
 
 end
