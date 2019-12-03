@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   get '/role/:id', to: 'pages#role', as: 'role'
+  patch '/role/:id', to: 'pages#role_update'
   get '/companies/:id/dashboard', to: 'companies#dashboard', as: 'dashboard'
   resources :candidates, only: %i[edit update]
   resources :companies, only: %i[show edit update dashboard]
