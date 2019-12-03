@@ -1,0 +1,26 @@
+.form-line{
+  padding-top: 12px;
+  width: 50vw;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  .label{
+    text-align: right;
+    padding-right: 8px;
+  }
+
+  .options{
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .submit{
+    // color: #FFF;
+    // background-color: #48328b;
+    // padding: 4px 12px;
+    // border-radius: 12px;
+  }
+}
