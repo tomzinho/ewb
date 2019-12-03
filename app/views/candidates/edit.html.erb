@@ -1,16 +1,16 @@
-<%= simple_form_for @candidate do |f| %>
-  <%= f.input :small_desc %>
-  <%= f.input :address %>
-  <%= f.input :github_link %>
+<div class="container">
+  <div>
+    <p>Olá <span><%= @candidate.user.email %></span></p>
+  </div>
 
- <p> Work Authorizations </p>
-  <%= f.input :workauth_bra, label:  "Brasil" %>
-  <%= f.input :workauth_usa, label:  "United States" %>
-  <%= f.input :workauth_eu, label:  "European Union" %>
-  <%= f.input :workauth_can, label: "Canada" %>
-  <%= f.input :workauth_aus, label: "Australia" %>
-  <%= f.input :workauth_gb, label:  "Great Britain" %>
+  <div class="col-6 offset-3 mb-5">
+    <%= render 'cand_edit_form' %>
 
-  <%= f.submit 'Save' %>
-<% end %>
+   <%= link_to "Please start your resumes!", new_resume_path %>
+
+
+</div>
+
+
+
 

@@ -13,7 +13,7 @@ class Company < ApplicationRecord
   # validates :twitter_link, on: :update
   # validates :logo, on: :update
   # validates :banner, on: :update
-  validates :cnpj, numericality: { only_integer: true }, on: :update
+  # validates :cnpj, numericality: { only_integer: true }, on: :update
   # validates :address, presence: true, on: :update
   # validates :latitude, on: :update
   # validates :longitude, on: :update
