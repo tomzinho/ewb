@@ -1,5 +1,6 @@
 class Job < ApplicationRecord
   belongs_to :company
+  has_many :applies
 
   validates :company_id, presence: true, on: :update
   validates :title, presence: true, length: { minimum: 10 }, on: :update

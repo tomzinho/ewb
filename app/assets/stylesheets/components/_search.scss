@@ -1,10 +1,12 @@
 .yellow-box {
   // border: 2px dotted yellow;
   display: flex;
-  // background-color: #FFE310;
-  background: linear-gradient(120deg, #FFE310 0%, #CEED21 100%);
+  background-image: asset-url('yellow-box.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background: linear-gradient(120deg, #FFE310 0%, #f12711 50%);
+  // width: 100vw;
   margin-top: 0px;
-  width: 100vw;
   height: 200px;
   padding: 70px 0px 70px 0px;
   justify-content: center;
