@@ -1,0 +1,193 @@
+.banner {
+  background-image: asset-url('cabecalho.png');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 100vh;
+  min-height: 480px;
+  padding: 170px 270px 10px 0px;
+
+}
+
+.first_line {
+  font-family: "Nunito", Helvetica, Sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: left;
+  font-size: 3rem;
+}
+
+
+.yellow_title {
+  font-family: "Nunito", Helvetica, Sans-serif;
+  font-weight: 800;
+  color: #ffe310;
+  text-align: left;
+  font-size: 3rem;
+}
+
+
+// .banner{
+// //  border: 3px dotted pink;
+//   background-size: cover;
+//   background-position: center;
+//   padding: 150px 0;
+
+//   h1 {
+//      font-family: "Nunito", Helvetica, Sans-serif;
+//      font-size: 3rem;
+//      font-weight: 400;
+//      text-align: left;
+//      color: #ffffff;
+//      line-height: 3.5rem;
+//   }
+
+//   p {
+//     font-size: 20px;
+//     color: white;
+//     opacity: .7;
+//     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+//   }
+
+//   .first_line {
+//     font-weight: 800;
+//   }
+
+//   .yellow_title {
+//     color: #ffe310;
+//     font-weight: 800;
+//   }
+
+//   .btn-banner {
+//     background-color: #9BDEDE;
+//     color: #1E1544;
+//     padding: 10px;
+//     font-size: 1.2rem;
+//     text-align: center;
+//     font-family: "Space Mono", monospace;
+//     border-radius: 30px;
+//     margin-top: 30px;
+//   }
+// }
+
+// .btn-apply-now {
+//   background-color: #48328B;
+//   color: #ffffff;
+//   padding: 7px;
+//   font-size: 1.0rem;
+//   text-align: center;
+//   font-family: "Space Mono", monospace;
+//   border-radius: 15px;
+//   margin-top: 30px;
+
+
+//   .cards-offers {
+//     background-color: #6FAEF7;
+//     padding: 20px;
+
+//     .offer-h1 {
+//     font-size: 1.5rem;
+//     text-align: left;
+//     font-family: "Space Mono", monospace;
+//     font-weight: bold;
+//     color: #0055C9;
+//     }
+
+//     .offer-h2 {
+//     font-size: 1.2rem;
+//     text-align: left;
+//     padding-bottom: 10px;
+//     font-family: "Space Mono", monospace;
+//     color: #0055C9;
+//     }
+
+//     .offer-p {
+//     font-size: 1.0rem;
+//     text-align: left;
+//     font-family: "Nunito", Helvetica, Sans-serif;
+//     color: white;
+//     }
+//   }
+
+//   .cards-items {
+//     margin-top: 30px;
+//     position: absolute;
+//     bottom: 0;
+//     padding: 5rem 5rem 0 5rem;
+//     width: 98vw;
+//   }
+
+
+// .container {
+//   // border:2px dashed purple;
+// }
+
+// .search {
+//   // border: 2px dotted yellow;
+//   background-color: #FFE310;
+//   margin-top: -30px;
+//   width: 100vw;
+//   height: 250px;
+//   display: flex;
+//   justify-content: center;
+//   padding: 70px 0px 70px 0px;
+// }
+
+
+// .infos {
+//  // border: 3px dotted pink;
+//   height: 40px;
+//   display: flex;
+//   padding: 40px;
+// }
+
+//   .mapa {
+//   //  border: 3px dotted blue;
+//     height: 400px;
+//     width: 50%;
+//     background-image: asset-url('world.png');
+//     margin-top: -30px;
+//     background-size: cover;
+//     //   width: 50vw;
+//     //   height: 400px;
+//     background-repeat: no-repeat;
+
+//   }
+
+//   .texto {
+//    // border: 3px dotted black;
+//     height: 400px;
+//     width: 50%;
+//     margin-top: -30px;
+//     padding: 40px 0px 0px 40px;
+//     background-color: #D0E3FC;
+//     background-size: cover;
+//     // width: 50vw;
+//     // height: 400px;
+//     background-repeat: no-repeat;
+
+//     h1 {
+//       color: #0B1ACE;
+//       font-weight: 800;
+//       font-size: 2.5rem;
+//       text-align: left;
+//       font-family: "Space Mono", monospace;
+//     }
+
+//     h2 {
+//       color: #0B1ACE;
+//       font-size: 1.2rem;
+//       text-align: left;
+//       font-family: "Space Mono", monospace;
+//     }
+
+//     p {
+//       color: #48328B;
+//       font-size: 1.1rem;
+//       text-align: left;
+//       font-family: "Nunito", Helvetica, Sans-serif;
+//     }
+// }
+
+
+// }

@@ -1,0 +1,134 @@
+.container-flex {
+  display: flex;
+  min-height: 300px;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: -40vh;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.container-home{
+  width: 80vw;
+  margin: auto;
+}
+
+.cards-offers {
+    background-color: #6FAEF7;
+    padding: 20px;
+    height: 18rem;
+
+
+    .offer-h1 {
+    font-size: 1.5rem;
+    text-align: left;
+    font-family: "Space Mono", monospace;
+    font-weight: bold;
+    color: #0055C9;
+    }
+
+    .offer-h2 {
+    font-size: 1.2rem;
+    text-align: left;
+    padding-bottom: 10px;
+    font-family: "Space Mono", monospace;
+    color: #0055C9;
+    }
+
+    .offer-p {
+    font-size: 1.0rem;
+    text-align: left;
+    font-family: "Nunito", Helvetica, Sans-serif;
+    color: white;
+    }
+  }
+
+
+
+
+
+//
+//   }
+
+//   .cards-items {
+//     margin-top: 30px;
+//     position: absolute;
+//     bottom: 0;
+//     padding: 5rem 5rem 0 5rem;
+//     width: 98vw;
+//   }
+
+
+// .container {
+//   // border:2px dashed purple;
+// }
+
+// .search {
+//   // border: 2px dotted yellow;
+//   background-color: #FFE310;
+//   margin-top: -30px;
+//   width: 100vw;
+//   height: 250px;
+//   display: flex;
+//   justify-content: center;
+//   padding: 70px 0px 70px 0px;
+// }
+
+
+// .infos {
+//  // border: 3px dotted pink;
+//   height: 40px;
+//   display: flex;
+//   padding: 40px;
+// }
+
+//   .mapa {
+//   //  border: 3px dotted blue;
+//     height: 400px;
+//     width: 50%;
+//     background-image: asset-url('world.png');
+//     margin-top: -30px;
+//     background-size: cover;
+//     //   width: 50vw;
+//     //   height: 400px;
+//     background-repeat: no-repeat;
+
+//   }
+
+//   .texto {
+//    // border: 3px dotted black;
+//     height: 400px;
+//     width: 50%;
+//     margin-top: -30px;
+//     padding: 40px 0px 0px 40px;
+//     background-color: #D0E3FC;
+//     background-size: cover;
+//     // width: 50vw;
+//     // height: 400px;
+//     background-repeat: no-repeat;
+
+//     h1 {
+//       color: #0B1ACE;
+//       font-weight: 800;
+//       font-size: 2.5rem;
+//       text-align: left;
+//       font-family: "Space Mono", monospace;
+//     }
+
+//     h2 {
+//       color: #0B1ACE;
+//       font-size: 1.2rem;
+//       text-align: left;
+//       font-family: "Space Mono", monospace;
+//     }
+
+//     p {
+//       color: #48328B;
+//       font-size: 1.1rem;
+//       text-align: left;
+//       font-family: "Nunito", Helvetica, Sans-serif;
+//     }
+// }
+
+
+// }
