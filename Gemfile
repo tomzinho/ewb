@@ -4,6 +4,10 @@ ruby '2.6.3'
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
 gem 'geocoder'
+gem 'omniauth-linkedin-oauth2'
+
+gem 'better_errors'
+gem 'binding_of_caller'
 
 gem 'bootsnap', require: false
 gem 'devise'
