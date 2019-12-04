@@ -1,0 +1,85 @@
+// DIVS //
+
+.signup-background {
+  height: 90vh;
+  margin: 0;
+  padding-top: 10vh;
+  background-image: asset-url('signup-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.signup-box {
+  background-color: rgba(255,255,255,0.2);
+  padding: 30px;
+  width: 30%;
+  margin: auto;
+}
+
+#signup-title {
+  color: #FFE310;
+  font-family: "Nunito", sans-serif !important;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+
+.simple_form label {
+  color: white;
+  font-family: "Nunito", sans-serif !important;
+  font-weight: 800;
+}
+
+
+
+
+
+// BUTTONS //
+
+// .btn-signup {
+//   background-color: #FFE310;
+//   color: #48328B;
+//   padding: 7px 12px 7px 12px;
+//   font-family: "Space Mono", monospace;
+//   border-radius: 50px;
+//   margin-bottom: 15px;
+
+//   &:hover {
+//   background-color: #9BDEDE;
+//   }
+// }
+
+// .btn-forgot {
+//   background-color: #48328B;
+//   color: #ffffff;
+//   padding: 7px 12px 7px 12px;
+//   font-family: "Space Mono", monospace;
+//   border-radius: 50px;
+//   margin-bottom: 20px;
+
+//   &:hover {
+//   background-color: #9BDEDE;
+//   }
+// }
+
+
+// .btn-linkedin {
+//   background-color: #48328B;
+//   color: #ffffff;
+//   padding: 7px 12px 7px 12px;
+//   font-family: "Space Mono", monospace;
+//   border-radius: 50px;
+//   margin-bottom: 20px;
+
+//   &:hover {
+//   background-color: #9BDEDE;
+//   }
+// }
+
+// .text-muted {
+//   color: white !important;
+// }
+
+// legend {
+//   color: white !important;
+// }

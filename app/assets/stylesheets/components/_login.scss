@@ -1,0 +1,138 @@
+// DIVS //
+
+.login-background {
+  height: 90vh;
+  margin: 0;
+  padding-top: 10vh;
+  background-image: asset-url('login-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.login-box {
+  background-color: rgba(255,255,255,0.2);
+  padding: 30px;
+  width: 30%;
+  margin: auto;
+}
+
+#login-title {
+  color: #AACF37;
+  font-family: "Nunito", sans-serif !important;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+
+.simple_form label {
+  color: white;
+  font-family: "Nunito", sans-serif !important;
+  font-weight: 800;
+}
+
+
+
+
+// INPUTS //
+.login-form {
+
+
+  h2 {
+   font-family: "Nunito";
+   font-weight: 800;
+   font-size: 24px;
+  }
+
+  .form-input {
+      width: 22rem;
+      height: 100%;
+      border-radius: 2px;
+      padding-left: 1.5rem;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #FDFCFD;
+
+
+      p {
+        font-family: "Nunito", sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+      }
+  }
+
+  .form-input:focus {
+      color: #495057;
+      background-color: #fff;
+      border-color: #93c4fd;
+      outline: 0;
+      box-shadow: black;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+// // BUTTONS //
+
+// .btn-login {
+//   background-color: #48328B;
+//   color: #ffffff;
+//   padding: 7px 12px 7px 12px;
+//   font-family: "Space Mono", monospace;
+//   border-radius: 50px;
+//   margin-bottom: 15px;
+
+//   &:hover {
+//   background-color: #9BDEDE;
+//   }
+// }
+
+
+// .btn-forgot {
+//   background-color: #4662AE;
+//   color: #ffffff;
+//   padding: 7px 12px 7px 12px;
+//   font-family: "Space Mono", monospace;
+//   border-radius: 50px;
+//   margin-bottom: 20px;
+
+//   &:hover {
+//   background-color: #9BDEDE;
+//   }
+// }
+
+
+// .btn-signup {
+//   background-color: #4662AE;
+//   color: #ffffff;
+//   padding: 7px 12px 7px 12px;
+//   font-family: "Space Mono", monospace;
+//   border-radius: 50px;
+//   margin-bottom: 20px;
+
+//   &:hover {
+//   background-color: #9BDEDE;
+//   }
+// }
+
+// .btn-linkedin {
+//   background-color: #4662AE;
+//   color: #ffffff;
+//   padding: 7px 12px 7px 12px;
+//   font-family: "Space Mono", monospace;
+//   border-radius: 50px;
+//   margin-bottom: 20px;
+
+//   &:hover {
+//   background-color: #9BDEDE;
+//   }
+// }
