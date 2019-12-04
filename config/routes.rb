@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'applies/new'
   devise_for :users,
       controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root to: 'pages#home'
@@ -12,6 +13,10 @@ Rails.application.routes.draw do
   resources :companies, only: %i[show edit update dashboard]
   resources :resumes
   resources :jobs, only: %i[show new create index]
+
+  resources :jobs do
+    resources :applies, only: %i[new]
+  end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

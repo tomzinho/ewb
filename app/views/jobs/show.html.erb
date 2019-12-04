@@ -1,6 +1,5 @@
 <div class="container mt-5">
   <div class="row">
-
     <div class="col comp-logo">
       <% if @job.company.logo.to_s.empty? %>
         <%= image_tag('logo-default.png', class: "img-fluid") %>
@@ -45,7 +44,7 @@
   </div>
   <div class="row mt-4 ">
     <div class="col-12 d-flex flex-row-reverse">
-      <%= link_to "apply now", company_path(@job.company), class: "btn btn-apply" %>
+      <%= link_to "apply now", new_job_apply_path(@job), class: "btn btn-apply" %>
     </div>
   </div>
 </div>

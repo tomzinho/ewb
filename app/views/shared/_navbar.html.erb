@@ -42,6 +42,7 @@
         <li>
           <%= render 'shared/nav_dropdown' %>
         </li>
+      <!-- If the user is not signed in -->
       <% else %>
         <li class="nav-item">
           <%= link_to "Create Account", new_user_registration_path, class: "nav-link" %>
@@ -49,7 +50,6 @@
         <li class="nav-item">
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>
         </li>
-
       <% end %>
     </ul>
   </div>
