@@ -21,7 +21,7 @@
               <%= job.description.first(90) + "..."  %>
             </div>
             <div class="btn btn-apply-now">
-              Apply now
+              <%= link_to "Apply now", job_path(job) %>
             </div>
           </div>
         </div>
