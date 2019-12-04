@@ -7,10 +7,6 @@ class AppliesController < ApplicationController
     else
       redirect_to new_resume_path, alert: 'Create a resume first'
     end
-
-    # else
-    #   redirect_to root_path, alert: 'Create a resume first'
-    # end
   end
 
   private
