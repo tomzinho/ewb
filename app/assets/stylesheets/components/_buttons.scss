@@ -105,3 +105,77 @@
     }
   }
 }
+
+.btn-password {
+  background-color: #48328B;
+  color: #ffffff;
+  padding: 7px 12px 7px 12px;
+  font-family: "Space Mono", monospace;
+  border-radius: 50px;
+  margin-bottom: 15px;
+
+  &:hover {
+  background-color: #9BDEDE;
+  }
+}
+
+.btn-login {
+  background-color: #48328B;
+  color: #ffffff;
+  padding: 7px 12px 7px 12px;
+  font-family: "Space Mono", monospace;
+  border-radius: 50px;
+  margin-bottom: 15px;
+
+  &:hover {
+  background-color: #9BDEDE;
+  }
+}
+
+.btn-signup {
+  background-color: #48328B;
+  color: #ffffff;
+  padding: 7px 12px 7px 12px;
+  font-family: "Space Mono", monospace;
+  border-radius: 50px;
+  margin-bottom: 15px;
+
+  &:hover {
+  background-color: #9BDEDE;
+  }
+}
+
+.btn-forgot {
+  background-color: #48328B;
+  color: #ffffff;
+  padding: 7px 12px 7px 12px;
+  font-family: "Space Mono", monospace;
+  border-radius: 50px;
+  margin-bottom: 20px;
+
+  &:hover {
+  background-color: #9BDEDE;
+  }
+}
+
+
+.btn-linkedin {
+  background-color: #48328B;
+  color: #ffffff;
+  padding: 7px 12px 7px 12px;
+  font-family: "Space Mono", monospace;
+  border-radius: 50px;
+  margin-bottom: 20px;
+
+  &:hover {
+  background-color: #9BDEDE;
+  }
+}
+
+.text-muted {
+  color: white !important;
+}
+
+legend {
+  color: white !important;
+}
