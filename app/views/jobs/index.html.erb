@@ -1,0 +1,35 @@
+<div class="index-offers">
+
+  <div style="margin-top: 100px; margin-bottom: 20px">
+  <h1 style="font-size: 60px">All job offers</h1>
+  </div>
+
+  <div style="margin-bottom: 40px">
+  <h2 style="color: white; font-family: Nunito; font-size: 28px; line-height: 40px">We want you to have the best experience<br>
+  during job interviews – <strong>starting by choosing <br>
+  the perfect offer that fits you!</strong></h2>
+  </div>
+
+  <div class="curvas-jobs">
+    <%= image_tag('curvas2.png') %>
+  </div>
+
+  <div class="cards">
+    <% @jobs.each do |job| %>
+      <%= link_to job do  %>
+        <div class="card-job">
+            <% if job.company.logo.to_s.empty? %>
+              <%= image_tag('logo-default.png', class: "img-fluid") %>
+            <% else %>
+              <%= image_tag(job.company.logo_url,  class: "img-fluid") %>
+            <% end %>
+          <div class="card-job-infos">
+            <h2> <%= job.title %></h2>
+            <p> <%= job.description %> </p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+

@@ -100,11 +100,6 @@ ActiveRecord::Schema.define(version: 2019_12_03_123145) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "role"
-    t.string "provider"
-    t.string "uid"
-    t.string "firstName"
-    t.string "lastName"
-    t.string "profilePicture"
     t.string "linkedin_picture_url"
     t.string "first_name"
     t.string "last_name"

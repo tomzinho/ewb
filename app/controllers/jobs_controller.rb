@@ -1,5 +1,10 @@
   class JobsController < ApplicationController
 
+  def index
+    @jobs = Job.all
+  end
+
+
   def new
     if current_user.company.blank?
       redirect_to root_path, alert: 'Operation Invalid'
