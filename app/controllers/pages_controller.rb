@@ -12,6 +12,13 @@ class PagesController < ApplicationController
 
   def role_update
     @user = User.find(params[:id])
+
+    if @user.role == 'company'
+      @user.company = Company.new(user_id: current_user)
+    else
+      @user.candidate = Candidate.new(user_id: current_user)
+    end
+
     @user.update(user_params)
     redirect_to root_path
   end
