@@ -7,9 +7,10 @@
   </div>
 </div>
   <div class="container-home">
-    <div class="row container-flex">
+    <div class="row" style="margin-top: -40vh;">
       <% @jobs.each do |job| %>
-        <div class="col-3">
+        <%= link_to job_path(job), class: "col-sm-12 col-md-6 col-lg-4 col-xl-3"  do %>
+        <div style="margin-bottom: 20px;">
           <div class="cards-offers">
             <div class="offer-h1">
              <%= job.title  %>
@@ -20,11 +21,12 @@
             <div class="offer-p">
               <%= job.description.first(90) + "..."  %>
             </div>
-            <div class="btn btn-apply-now">
-              <%= link_to "Apply now", job_path(job) %>
-            </div>
+            <!-- <div>
+              <%#= link_to "Apply now", job_path(job), class: "btn-apply-now" %>
+            </div> -->
           </div>
         </div>
+        <% end %>
       <% end %>
     </div>
   </div>

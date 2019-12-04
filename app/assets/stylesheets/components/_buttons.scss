@@ -16,16 +16,18 @@
 
 .btn-apply-now {
   background-color: #48328B;
-  color: #ffffff;
+  color: white;
   padding: 7px 12px 7px 12px;
   font-size: 1.0rem;
   text-align: center;
   font-family: "Space Mono", monospace;
   border-radius: 20px;
   margin-top: 30px;
+  text-decoration: none;
 
   &:hover {
     background-color: #9BDEDE;
+    text-decoration: none;
   }
 }
 
@@ -173,7 +175,7 @@
 }
 
 .text-muted {
-  color: white !important;
+  // color: white !important;
 }
 
 legend {
