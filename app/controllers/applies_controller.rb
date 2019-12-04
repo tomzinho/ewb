@@ -9,6 +9,10 @@ class AppliesController < ApplicationController
     end
   end
 
+  def index
+
+  end
+
   private
 
   def create_application
