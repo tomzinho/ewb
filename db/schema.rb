@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_04_130126) do
+ActiveRecord::Schema.define(version: 2019_12_04_142920) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 2019_12_04_130126) do
     t.boolean "workauth_aus"
     t.string "first_name"
     t.string "last_name"
+    t.string "work_city"
+    t.string "skills_list"
     t.index ["user_id"], name: "index_candidates_on_user_id"
   end
 

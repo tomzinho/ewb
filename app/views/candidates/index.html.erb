@@ -1,0 +1,9 @@
+<% @candidates.each do |candidate| %>
+
+<% if candidate.photo.present? %>
+    <%= cl_image_tag candidate.photo, height: 300, width: 400, crop: :fill %>
+  <% end %>
+  <h2><%= candidate.user.email %></h2>
+
+  <p><%= candidate.address %></p>
+  <% end %>
