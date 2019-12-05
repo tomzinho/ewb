@@ -4,6 +4,9 @@
     <p>Olá <span><%= @candidate.user.email %></span></p>
   </div>
 
+  <%= f.input :first_name, label: "first name" %>
+  <%= f.input :first_name, label: "last name" %>
+
 
   <% if @candidate.photo.present? %>
     <%= cl_image_tag @candidate.photo, height: 300, width: 400, crop: :fill %>
@@ -30,14 +33,16 @@
     </select> -->
   </div>
 
-<!--   <div class="skill-select">
+<div class="skill-select">
   <%= f.input :skills_list, label: " ...", collection: %i[Rails C# Go Python Javascript], input_html:{ multiple: true, class: "select2-skills", label: "Test "} %>
 </div>
- -->
+
+
 
   <%= f.input :small_desc, label: "Short bio" %>
  <!--  <%= f.input :address %>
   --> <%= f.input :github_link %>
+
 
  <p> Work Authorizations </p>
   <%= f.input :workauth_bra, label:  "Brasil" %>
