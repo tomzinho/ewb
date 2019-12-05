@@ -3,6 +3,7 @@ Rails.application.routes.draw do
       controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root to: 'pages#home'
 
+  get '/how', to: 'pages#how'
   get '/role/:id', to: 'pages#role', as: 'role'
   patch '/role/:id', to: 'pages#role_update'
   get '/candidates/:id/dashboard', to: 'candidates#dashboard', as: 'candidate_dashboard'
@@ -12,6 +13,8 @@ Rails.application.routes.draw do
   resources :companies, only: %i[show edit update dashboard]
   resources :resumes
   resources :jobs, only: %i[show new create index]
+
+
 
   resources :jobs do
     resources :applies, only: %i[new]
