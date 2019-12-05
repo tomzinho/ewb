@@ -1,0 +1,14 @@
+.form-resume {
+    grid-area: text;
+    width: 100%;
+    padding: 5px;
+    // margin-top: 2rem;
+}
+
+.text {
+  padding: 5px !important;
+  background: #7791b1;
+  textarea {
+    background: white;
+  }
+}
