@@ -1,10 +1,11 @@
 <%= simple_form_for @candidate do |f| %>
 
-
-
   <div>
     <p>Olá <span><%= @candidate.user.email %></span></p>
   </div>
+
+  <%= f.input :first_name, label: "first name" %>
+  <%= f.input :first_name, label: "last name" %>
 
 
   <% if @candidate.photo.present? %>
@@ -17,7 +18,7 @@
 
   <div class="city-select">
 
-  <%= f.select :work_city, ["São Paulo", "Rio de Janeiro", "Curitiba"], input_html:{ class: "select2-city", label: "City" } %>
+  <%= f.select :work_city, ["São Paulo", "Rio de Janeiro", "Belo Horizonte","Brasilia","Other Brasil","Outside Brazil"], input_html:{ class: "select2-city", label: "City" } %>
 
    <!--  <select class="select2-city" name="work_city">
       <option value="S  P"> São Paulo</option>
@@ -32,14 +33,16 @@
     </select> -->
   </div>
 
-  <div class="skill-select">
-    <%= f.input :skills_list, label: " ...", collection: %i[Rails C# Go Python Javascript], input_html:{ multiple: true, class: "select2-skills", label: "Test "} %>
-  </div>
+<div class="skill-select">
+  <%= f.input :skills_list, label: " ...", collection: %i[Rails C# Go Python Javascript], input_html:{ multiple: true, class: "select2-skills", label: "Test "} %>
+</div>
+
 
 
   <%= f.input :small_desc, label: "Short bio" %>
-  <%= f.input :address %>
-  <%= f.input :github_link %>
+ <!--  <%= f.input :address %>
+  --> <%= f.input :github_link %>
+
 
  <p> Work Authorizations </p>
   <%= f.input :workauth_bra, label:  "Brasil" %>
