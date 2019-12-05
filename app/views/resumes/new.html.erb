@@ -1,13 +1,17 @@
-<%= simple_form_for @resume do |f| %>
+<div class="container">
 
-  <%= f.input :resume_language, collection: Resume::LANGUAGE_LIST, as: :select %>
+<%= simple_form_for @resume, defaults: {input_html: { class: "form-resume" } } do |f| %>
 
-  <%= f.input :education %>
-  <%= f.input :skills %>
-  <%= f.input :experience %>
+  <%= f.input :resume_language,  label: "Your Resume language", collection: Resume::LANGUAGE_LIST, as: :select, label_html: { style: "color: #444444" }  %>
+
+  <%= f.input :education, input_html: { class: "text" } %>
+  <%= f.input :skills, input_html: { class: "text" } %>
+  <%= f.input :experience, label: "Please describe some of your experiences below:", input_html: { class: "text" } %>
 
   <%= f.input :video %>
 
  <%= f.button :submit %>
 
 <% end %>
+
+</div>

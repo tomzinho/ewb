@@ -32,7 +32,11 @@
                   <td><%= job.title %></td>
                   <td><%= job.created_at %></td>
                   <td><%= job.description %> </td>
-                  <td> <%= job.applies.count %></td>
+                  <td>
+                    <%= link_to job_applies_path(job) do %>
+                      <%= job.applies.count %>
+                    <% end %>
+                  </td>
                 </tr>
               <% end %>
             </tbody>
