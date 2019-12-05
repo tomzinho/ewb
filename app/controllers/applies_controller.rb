@@ -1,11 +1,15 @@
 class AppliesController < ApplicationController
   def new
-    if Resume.exists?(candidate_id: current_user) && !Apply.exists?(candidate_id: current_user)
-      create_application
-    elsif Apply.exists?(candidate_id: current_user)
-      redirect_to candidate_dashboard_path(current_user.candidate.id), alert: 'You already applied'
+    if current_user.candidate?
+      if Resume.exists?(candidate_id: current_user) && !Apply.exists?(candidate_id: current_user)
+        create_application
+      elsif Apply.exists?(candidate_id: current_user)
+        redirect_to candidate_dashboard_path(current_user.candidate.id), alert: 'You already applied'
+      else
+        redirect_to new_resume_path, alert: 'Create a resume first'
+      end
     else
-      redirect_to new_resume_path, alert: 'Create a resume first'
+      redirect_to root_path, alert: 'Operation Invalid'
     end
   end
 
