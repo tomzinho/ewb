@@ -1,5 +1,7 @@
 
-<div class="container">
+  <p><%= @candidate.first_name %></p>
+  <p><%= @candidate.last_name %></p>
+
 
 <% if @candidate.photo.present? %>
     <%= cl_image_tag @candidate.photo, height: 300, width: 400, crop: :fill %>
@@ -12,6 +14,7 @@
     <% @candidate.resumes.each do |resume| %>
        <%= resume.resume_language %>
        <%= resume.experience %>
+       <%= resume.video %>
 
     <% end %>
 </div>
@@ -19,5 +22,4 @@
     <%= link_to "Create a new Resume", new_resume_path, class: "btn btn-new-resume" %>
   </div>
 
-</div>
 
