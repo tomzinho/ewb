@@ -12,13 +12,13 @@ Rails.application.routes.draw do
 
   resources :candidates, only: %i[edit update dashboard index]
   resources :companies, only: %i[show edit update dashboard]
-  resources :resumes
+  resources :resumes, only: %i[new create show]
   resources :jobs, only: %i[show new create index]
 
 
 
   resources :jobs do
-    resources :applies, only: %i[ new  index]
+    resources :applies, only: %i[new  index]
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
