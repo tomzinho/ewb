@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
 
   resources :jobs do
-    resources :applies, only: %i[new]
+    resources :applies, only: %i[ new  index]
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

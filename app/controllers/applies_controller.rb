@@ -9,6 +9,11 @@ class AppliesController < ApplicationController
     end
   end
 
+  def index
+    @job = Job.find(params[:job_id])
+    @applies = Apply.where(job_id: @job)
+  end
+
   private
 
   def create_application
