@@ -1,25 +1,58 @@
-
-  <p><%= @candidate.first_name %></p>
-  <p><%= @candidate.last_name %></p>
-
-
-<% if @candidate.photo.present? %>
-    <%= cl_image_tag @candidate.photo, height: 300, width: 400, crop: :fill %>
-  <% end %>
-
-   <p><%= @candidate.small_desc %></p>
-
+<div class="">
+     <h1 id="dash-videos-title">Dashboard</h1>
 </div>
 
+
+
+
+
+
+<div class="">
+  <!-- aparece o nome -->
+        <p class=""><%= current_user.first_name %> <%= current_user.last_name %></p>
+  <!-- aparece o nome -->
+
+
+  <!-- aparece a foto -->
+        <% if @candidate.photo.present? %>
+          <%= cl_image_tag @candidate.photo, height: 300, width: 400, crop: :fill %>
+        <% end %>
+  <!-- aparece a foto -->
+
+
+  <!-- aparece a descricao -->
+        <p><%= @candidate.small_desc %></p>
+  <!-- aparece a descricao -->
+
+  <!-- aparece os submit -->
+      <%= link_to "Create a new resume", new_resume_path, class: "btn btn-dash-videos" %>
+  <!-- aparece os submit -->
+</div>
+
+
+
+
+<div class="">
+   <!-- aparece os videos -->
+
+     <% @candidate.resumes.each do |resume| %>
+      <%= raise %>
+        <%= resume.resume_language %>
+        <%= resume.video %>
+     <% end %>
+   <!-- aparece os resumes -->
+</div>
+
+
+
+
+<div class="">
+  <!-- aparece os resumes -->
     <% @candidate.resumes.each do |resume| %>
-       <%= resume.resume_language %>
        <%= resume.experience %>
-       <%= resume.video %>
-
     <% end %>
+  <!-- aparece os resumes -->
 </div>
-  <div class="row mt-2 d-flex justify-content-end">
-    <%= link_to "Create a new Resume", new_resume_path, class: "btn btn-new-resume" %>
-  </div>
+
 
 
