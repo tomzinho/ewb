@@ -3,7 +3,81 @@
 <head>
   <title>We're sorry, but something went wrong (500)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
   <style>
+    body{
+      background-color: #AACF37;
+      position: relative;
+    }
+
+    .grid-container{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 10%;
+      grid-template-areas:
+        ". ."
+        "image text"
+        "image text"
+        ". .";
+      padding-top: 20vh;
+      width: 50vw;
+      margin: auto;
+      height: 50vh;
+      /*background-color: rgba(255, 255, 255, .3);*/
+    }
+
+    .text{
+      grid-area: text;
+      color: #48328B;
+    }
+
+    .image{
+      grid-area: image;
+    }
+
+    .request{
+      font-size: 6rem;
+      font-family: 'Nunito', sans-serif;
+      line-height: 0.05rem;
+    }
+
+    .pun{
+      font-size: 2rem;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      line-height: 0.05rem;
+      transform: translate(0, -5vh);
+
+    }
+
+    .info{
+      font-family: 'Nunito', sans-serif;
+      font-weight: 300;
+      transform: translate(0, -6vh);
+
+    }
+
+    .links{
+      text-align: center;
+    }
+
+    .btn{
+      font-family: 'Space Mono', monospace;
+      color: black;
+      background-color: white;
+      padding: 5px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .curvas-bg{
+      position: absolute;
+      z-index: -1;
+    }
+  </style>
+
+  <!-- <style>
   .rails-default-error-page {
     background-color: #EFEFEF;
     color: #2E2F30;
@@ -51,16 +125,248 @@
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
-  </style>
+  </style> -->
 </head>
 
-<body class="rails-default-error-page">
-  <!-- This file lives in public/500.html -->
+<body>
+
+  <div class="grid-container">
+    <div class="image">
+      <?xml version="1.0" encoding="utf-8"?>
+      <!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 345.1 346.6" style="enable-background:new 0 0 345.1 346.6;" xml:space="preserve">
+      <style type="text/css">
+        .st0{clip-path:url(#SVGID_2_);}
+        .st1{fill:#48328B;}
+        .st2{fill:#463087;}
+        .st3{fill:#442F84;}
+        .st4{fill:#422E80;}
+        .st5{fill:#402C7D;}
+        .st6{fill:#3E2B79;}
+        .st7{fill:#3C2A76;}
+        .st8{fill:#3A2873;}
+        .st9{fill:#382771;}
+        .st10{fill:#37266E;}
+        .st11{fill:#35256B;}
+        .st12{fill:#342469;}
+        .st13{fill:#322367;}
+        .st14{fill:#312264;}
+        .st15{fill:#302162;}
+        .st16{fill:#2F2160;}
+        .st17{fill:#2E205E;}
+        .st18{fill:#2D1F5D;}
+        .st19{fill:#2B1E5B;}
+        .st20{fill:#2B1E59;}
+        .st21{fill:#2A1D58;}
+        .st22{fill:#291C56;}
+        .st23{fill:#281C55;}
+        .st24{fill:#271B53;}
+        .st25{fill:#261B52;}
+        .st26{fill:#261A51;}
+        .st27{fill:#251A50;}
+        .st28{fill:#251A4F;}
+        .st29{fill:#24194E;}
+        .st30{fill:#23194D;}
+        .st31{fill:#23184C;}
+        .st32{fill:#22184C;}
+        .st33{fill:#22184B;}
+        .st34{fill:#22184A;}
+        .st35{fill:#21174A;}
+        .st36{fill:#211749;}
+        .st37{fill:#211748;}
+        .st38{fill:#201748;}
+        .st39{fill:#201648;}
+        .st40{fill:#201647;}
+        .st41{fill:#1F1646;}
+        .st42{fill:#1F1645;}
+        .st43{fill:#1F1545;}
+        .st44{fill:#1E1545;}
+        .st45{fill:#1E1544;}
+        .st46{fill:#538BCB;}
+        .st47{fill:#AACF37;}
+        .st48{fill:#4662AE;}
+        .st49{fill:url(#SVGID_3_);}
+        .st50{opacity:0.9;}
+        .st51{fill:#FFFFFF;}
+      </style>
+      <title>LOGO_EWB</title>
+      <g id="icons">
+        <g>
+          <defs>
+            <path id="SVGID_1_" d="M44.7,80.3l-16.1-9.5l4.9-8.4l34,20c-1.8,2.7-3.4,5.5-5,8.3l-9.4-5.6c-15.5,29.1-19.5,62.9-11.2,94.8
+              C71,292.9,222.2,314.9,282.5,215.3l-9.1-5.4c1.6-2.8,3.2-5.6,4.6-8.6l40.8,24l-4.9,8.4l-22.9-13.4
+              c-64.5,106.9-227.1,83.6-258.4-37.8C23.5,148,27.9,111.6,44.7,80.3z"/>
+          </defs>
+          <clipPath id="SVGID_2_">
+            <use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+          </clipPath>
+          <g class="st0">
+            <rect x="23.5" y="62.4" class="st1" width="4.4" height="264.6"/>
+            <rect x="27.9" y="62.4" class="st1" width="4.1" height="264.6"/>
+            <rect x="32" y="62.4" class="st2" width="4.1" height="264.6"/>
+            <rect x="36.1" y="62.4" class="st3" width="4.1" height="264.6"/>
+            <rect x="40.2" y="62.4" class="st4" width="4.1" height="264.6"/>
+            <rect x="44.3" y="62.4" class="st5" width="4.1" height="264.6"/>
+            <rect x="48.4" y="62.4" class="st6" width="4.1" height="264.6"/>
+            <rect x="52.5" y="62.4" class="st7" width="4.1" height="264.6"/>
+            <rect x="56.6" y="62.4" class="st8" width="4.1" height="264.6"/>
+            <rect x="60.7" y="62.4" class="st9" width="4.1" height="264.6"/>
+            <rect x="64.8" y="62.4" class="st10" width="4.1" height="264.6"/>
+            <rect x="68.9" y="62.4" class="st11" width="4.1" height="264.6"/>
+            <rect x="73" y="62.4" class="st12" width="4.1" height="264.6"/>
+            <rect x="77" y="62.4" class="st13" width="4.1" height="264.6"/>
+            <rect x="81.1" y="62.4" class="st14" width="4.1" height="264.6"/>
+            <rect x="85.2" y="62.4" class="st15" width="4.1" height="264.6"/>
+            <rect x="89.3" y="62.4" class="st16" width="4.1" height="264.6"/>
+            <rect x="93.4" y="62.4" class="st17" width="4.1" height="264.6"/>
+            <rect x="97.5" y="62.4" class="st18" width="4.1" height="264.6"/>
+            <rect x="101.6" y="62.4" class="st19" width="4.1" height="264.6"/>
+            <rect x="105.7" y="62.4" class="st20" width="4.1" height="264.6"/>
+            <rect x="109.8" y="62.4" class="st21" width="4.1" height="264.6"/>
+            <rect x="113.9" y="62.4" class="st22" width="4.1" height="264.6"/>
+            <rect x="118" y="62.4" class="st23" width="4.1" height="264.6"/>
+            <rect x="122.1" y="62.4" class="st24" width="4.1" height="264.6"/>
+            <rect x="126.2" y="62.4" class="st25" width="4.1" height="264.6"/>
+            <rect x="130.3" y="62.4" class="st26" width="4.1" height="264.6"/>
+            <rect x="134.4" y="62.4" class="st27" width="4.1" height="264.6"/>
+            <rect x="138.5" y="62.4" class="st28" width="4.1" height="264.6"/>
+            <rect x="142.6" y="62.4" class="st29" width="4.1" height="264.6"/>
+            <rect x="146.6" y="62.4" class="st30" width="4.1" height="264.6"/>
+            <rect x="150.7" y="62.4" class="st31" width="4.1" height="264.6"/>
+            <rect x="154.8" y="62.4" class="st32" width="4.1" height="264.6"/>
+            <rect x="158.9" y="62.4" class="st33" width="4.1" height="264.6"/>
+            <rect x="163" y="62.4" class="st34" width="4.1" height="264.6"/>
+            <rect x="167.1" y="62.4" class="st35" width="4.1" height="264.6"/>
+            <rect x="171.2" y="62.4" class="st36" width="4.1" height="264.6"/>
+            <rect x="175.3" y="62.4" class="st37" width="4.1" height="264.6"/>
+            <rect x="179.4" y="62.4" class="st38" width="4.1" height="264.6"/>
+            <rect x="183.5" y="62.4" class="st39" width="4.1" height="264.6"/>
+            <rect x="187.6" y="62.4" class="st40" width="4.1" height="264.6"/>
+            <rect x="191.7" y="62.4" class="st40" width="4.1" height="264.6"/>
+            <rect x="195.8" y="62.4" class="st41" width="4.1" height="264.6"/>
+            <rect x="199.9" y="62.4" class="st41" width="4.1" height="264.6"/>
+            <rect x="204" y="62.4" class="st41" width="4.1" height="264.6"/>
+            <rect x="208.1" y="62.4" class="st41" width="4.1" height="264.6"/>
+            <rect x="212.1" y="62.4" class="st42" width="4.1" height="264.6"/>
+            <rect x="216.2" y="62.4" class="st43" width="4.1" height="264.6"/>
+            <rect x="220.3" y="62.4" class="st43" width="4.1" height="264.6"/>
+            <rect x="224.4" y="62.4" class="st43" width="4.1" height="264.6"/>
+            <rect x="228.5" y="62.4" class="st44" width="4.1" height="264.6"/>
+            <rect x="232.6" y="62.4" class="st44" width="4.1" height="264.6"/>
+            <rect x="236.7" y="62.4" class="st45" width="4.1" height="264.6"/>
+            <rect x="240.8" y="62.4" class="st45" width="4.1" height="264.6"/>
+            <rect x="244.9" y="62.4" class="st45" width="4.1" height="264.6"/>
+            <rect x="249" y="62.4" class="st45" width="4.1" height="264.6"/>
+            <rect x="253.1" y="62.4" class="st45" width="4.1" height="264.6"/>
+            <rect x="257.2" y="62.4" class="st45" width="4.1" height="264.6"/>
+            <rect x="261.3" y="62.4" class="st45" width="4.1" height="264.6"/>
+            <rect x="265.4" y="62.4" class="st45" width="4.1" height="264.6"/>
+            <rect x="269.5" y="62.4" class="st45" width="4.1" height="264.6"/>
+            <rect x="273.6" y="62.4" class="st45" width="4.1" height="264.6"/>
+            <rect x="277.7" y="62.4" class="st45" width="4.1" height="264.6"/>
+            <rect x="281.7" y="62.4" class="st45" width="4.1" height="264.6"/>
+            <rect x="285.8" y="62.4" class="st45" width="4.1" height="264.6"/>
+            <rect x="289.9" y="62.4" class="st45" width="4.1" height="264.6"/>
+            <rect x="294" y="62.4" class="st45" width="4.1" height="264.6"/>
+            <rect x="298.1" y="62.4" class="st45" width="4.1" height="264.6"/>
+            <rect x="302.2" y="62.4" class="st45" width="4.1" height="264.6"/>
+            <rect x="306.3" y="62.4" class="st45" width="4.1" height="264.6"/>
+            <rect x="310.4" y="62.4" class="st45" width="4.1" height="264.6"/>
+            <rect x="314.5" y="62.4" class="st45" width="4.1" height="264.6"/>
+          </g>
+        </g>
+        <path class="st46" d="M283,115.8c14,54.4-12.7,111-63.6,134.8c-6.4,3,1.9,63.4-5.1,65.2c-8,2.1-31-54.8-38.9-54.4
+          c-64.3,2.9-118.7-47-121.6-111.3s47-118.7,111.3-121.6C220,26.1,269.2,62.5,283,115.8z"/>
+        <path class="st47" d="M149.9,134.5c2.7,4.7-2.4,18.6,2.8,20.2c8.6,2.6,31.6-6.7,39.5-11s13.2-13.9,10.9-22.6c-1.7-6.3-7-11-12.7-14
+          c-6.4-3.4-13.8-4.6-21-3.3C155.7,106.6,142.2,121.1,149.9,134.5z"/>
+        <path class="st48" d="M253.2,70.7c-1,1.5-2.1,2.9-3.3,4.1c-2.7,2.5-5.5,4.8-8.6,6.8c-3,2.2-6.2,4.5-7.8,7.9s-1.9,9.6,1.5,11.4
+          c3.2,6.1,4.7,12.9,4.1,19.8c-0.3,3.6-1.8,7.8-5.3,8.6c-4.4,1-7.5-4-9.8-7.9C212.7,102,187.2,92.2,165.8,99
+          c-3.9,1.2-7.6,2.9-11.6,3.6s-8.5,0.1-11.4-2.7c-3.2-3.1-3.8-8.1-6.2-11.9c-3.1-4.8-9-7.1-14.8-7.6s-11.4,0.6-17.2,1
+          s-11.8,0.2-16.8-2.6c-1.7-1-3.3-2.3-4.5-3.9c1.6-1.9,3.3-3.8,5-5.7c42.3-45,113-47.3,158.2-5.2C248.9,66.1,251.1,68.4,253.2,70.7z"
+          />
+        <path class="st47" d="M253.2,70.7c-1,1.5-2.1,2.9-3.3,4.1c-2.7,2.5-5.5,4.8-8.6,6.8c-3,2.2-6.2,4.5-7.8,7.9s-0.5,7,1.5,11.4
+          s4.7,13,4.1,19.8c-0.3,3.6-1.8,7.8-5.3,8.6c-4.4,1-7.5-4-9.8-7.9C212.7,102,187.2,92.2,165.8,99c-3.9,1.2-7.6,2.9-11.6,3.6
+          s-8.5,0.1-11.4-2.7c-3.2-3.1-3.8-8.1-6.2-11.9c-3.1-4.8-9-7.1-14.8-7.6s-11.4,0.6-17.2,1s-11.8,0.2-16.8-2.6
+          c-1.7-1-3.3-2.3-4.5-3.9c1.6-1.9,3.3-3.8,5-5.7c3.8,2.4,8.8,3.1,13.4,2.7c6.7-0.5,13.3-2.8,20.1-2.3c6.9,0.5,13.4,3.7,18,8.9
+          c3.9,4.5,6.4,10.4,11.6,13.2c6.1,3.3,13.5,1.1,20.1-0.9c7.8-2.3,15.9-4.2,23.9-3.2s16.1,5.2,19.7,12.5c3.9,7.9,9.4,15.3,17.6,18.4
+          c1.4-9.9-5.7-19.3-5.5-29.3c0.2-7.9,5-15.2,11.2-20.1c2.5-2,5.2-3.7,8.1-5.2C248.9,66.1,251.1,68.4,253.2,70.7z"/>
+        <path class="st47" d="M281.8,156.1c-0.4,4.6-1.1,9.2-2.1,13.7c-4.5-0.6-8.9-2-12.9-4.1c-6.1-3.2-24.5-13-21.5-21.5
+          c4-11.3,17.7,1.4,23.9,4.1C273.8,150.3,278.3,152.5,281.8,156.1z"/>
+        <path class="st47" d="M132.5,170.3c-1,9.5-9.4,16.5-18.2,20.2s-18.4,5.2-26.9,9.5c-3.7,1.9-7.1,4.2-11.1,5.2
+          c-0.4,0.1-0.9,0.2-1.4,0.2c-2.2-3.6-4.3-7.3-6.1-11.1c-3.1-6.5-5.6-13.3-7.4-20.2c-6.7-25.8-3.9-53.1,7.7-77c3.2,0.9,6,2.7,8.4,5
+          c4.8,4.9,8.5,11.4,14.9,14c4.6,1.9,10.2,1.4,14.1,4.5c3.5,2.8,4.5,7.7,6.2,11.9c2.8,6.7,8,12.1,12.3,17.9S133.2,163.1,132.5,170.3z
+          "/>
+        <path class="st48" d="M115,158.8c0.4,5-1.1,10.4-5.1,13.5c-3.5,2.8-8.1,3.4-12.2,5.1c-6,2.5-10.5,7.5-15.7,11.4
+          c-3.8,2.9-8.5,5.4-13.2,5.6c-3.1-6.5-5.6-13.3-7.4-20.2c-5.5-21.3-4.6-43.7,2.5-64.4c0.7,0.9,1.4,1.9,2.1,2.8
+          c3.5,4.8,7.7,8.7,13.1,11.1s11.4,3.1,16.5,5.8c6.3,3.3,10.7,9.3,14.2,15.5C112.3,149.1,114.5,153.8,115,158.8z"/>
+        <path class="st47" d="M167.2,172.9c4.4-4.3,7.6-10.7,13.6-12c6-1.3,12.2,4.1,13.7,10.2c1.5,6.1-0.5,12.5-3.2,18.3s-6,11.2-7.3,17.4
+          c-1.3,5.8-0.8,11.9-1.4,17.8s-2.7,12.2-7.6,15.6c-6.3,4.3-15.2,2.2-21.2-2.4c-7.8-5.9-27-25.4-26-36.2
+          C129.5,183.9,157.1,182.8,167.2,172.9z"/>
+        <path class="st48" d="M144.1,195c-3,2-6.1,4.4-7,7.8c-1.1,4.1,1.4,8.2,3.8,11.7c3.6,5,7.4,9.7,11.6,14.2c3.4,3.6,8,7.3,12.6,5.7
+          c3.9-1.3,5.8-5.9,6-10.1s-0.7-8.3-0.2-12.5c1.5-11.2,13.7-19,14.7-30.3c0.3-2-0.1-4-1-5.8c-1-1.8-2.9-2.8-4.9-2.8
+          c-3.4,0.3-5.3,4.2-7.7,6.3c-2,1.6-4.2,2.9-6.6,3.6C157.9,185.9,150.8,190.5,144.1,195z"/>
+        <path class="st47" d="M206.2,205.1c1.9-7.2,3.8-14.5,5.8-21.8c0.6-2.4,1.3-4.9,2.9-6.9s4.3-3.2,6.6-2.4c2.7,1,3.8,4.1,4.5,6.9
+          c1.5,5.4,2.9,10.8,2.7,16.4s-2.5,11.3-7.1,14.4s-11.8,2.5-14.9-2.1"/>
+        <path class="st47" d="M91.5,208.4c-0.5,2,0,4,1.4,5.5c1.4,1.5,3.1,2.5,5.1,3c5.4,1.5,11.2,0.3,15.5-3.3c2.4-2.1,4.4-5.3,3.5-8.4
+          c-0.7-2.6-3.1-4.4-5.6-5.2c-3.7-1-7.6-0.6-11,1.1C97.4,202.6,92.6,205,91.5,208.4z"/>
+        <path class="st47" d="M242.1,100.8c7.1,7,7.2,16.9,6.6,27.1c0,0.8,0.4,1.5,1.1,1.9c0.9,0.3,1.8-0.1,2.2-0.9c0.4-0.8,0-1.8,0.4-2.6
+          c4.6-9.6,7.2-23.1-3.8-31.8c-1.5-1.2-3.7-6.4-6.2-5.2C239.3,90.7,240.4,99.1,242.1,100.8z"/>
+        <path class="st48" d="M195.6,136c3-5.2,1.2-12.7-2.9-17.4c-8.3-9.4-34.7-14.6-36.5,5.1c-0.8,9.2-2.5,20.9,4.6,23.1
+          C165.5,148.4,192.5,141.3,195.6,136z"/>
+
+          <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="237.5502" y1="306.143" x2="105.9332" y2="78.1763" gradientTransform="matrix(1 0 0 -1 0 348)">
+          <stop  offset="0" style="stop-color:#48328B"/>
+          <stop  offset="1" style="stop-color:#1E1544"/>
+        </linearGradient>
+        <path class="st49" d="M218.8,335l-46.9-65.5h-2c-56.4-0.2-105.5-38.3-119.8-92.8C33.1,110.5,72.9,43,139,25.9
+          s133.7,22.7,150.7,88.9c14.2,55.2-11.6,113.5-61.6,140.1L218.8,335z M178.8,255.4l30.6,42.6l6.1-52l3.4-1.7
+          c46.4-22.9,70.7-75.9,57.7-126l0,0C259.7,60,198.7,26.3,140.3,43.1c-56.1,16.2-89.8,73.3-76.8,130.2c12.9,50,59.8,84.7,111.5,82.2
+          L178.8,255.4z"/>
+        <g class="st50">
+          <path class="st51" d="M162.9,61.2h-61.8c-2.6,0-4.7-2.1-4.7-4.7l0,0l0,0c0-2.6,2.1-4.7,4.7-4.7l0,0h61.8c2.6,0,4.7,2.1,4.7,4.7
+            l0,0l0,0C167.6,59.1,165.5,61.2,162.9,61.2L162.9,61.2z"/>
+          <path class="st51" d="M131.1,47.3H86.7c-1.9,0-3.4-2.1-3.4-4.7l0,0c0-2.6,1.5-4.7,3.4-4.7h44.3c1.9,0,3.4,2.1,3.4,4.7l0,0
+            C134.5,45.2,133,47.3,131.1,47.3z"/>
+          <path class="st51" d="M243.6,118.4c0-2.6,2.1-4.7,4.7-4.7l0,0h21.4c2.6,0,4.7-2.1,4.7-4.7l0,0c0-2.6-2.1-4.7-4.7-4.7l0,0h-56.1
+            c-2.6,0-4.7,2.1-4.7,4.7l0,0l0,0c0,2.6,2.1,4.7,4.7,4.7l0,0h10.9c2.6,0,4.7,2.1,4.7,4.7s-2.1,4.7-4.7,4.7h-11.2
+            c-2.6-0.1-4.8,1.9-4.9,4.5s1.9,4.8,4.5,4.9c0.1,0,0.3,0,0.4,0h56.1c2.6,0.1,4.8-1.9,4.9-4.5s-1.9-4.8-4.5-4.9c-0.1,0-0.3,0-0.4,0
+            h-21.2C245.7,123.1,243.6,121,243.6,118.4z"/>
+          <path class="st51" d="M217.9,96.7h-4.6c-2.6,0-4.7-2.1-4.7-4.7l0,0c0-2.6,2.1-4.7,4.7-4.7l0,0h4.6c2.6,0,4.7,2.1,4.7,4.7
+            c0,0,0,0,0,0l0,0C222.6,94.6,220.5,96.7,217.9,96.7z"/>
+          <path class="st51" d="M92.8,182c0-2.6,2.1-4.7,4.7-4.7l0,0H119c2.6,0,4.7-2.1,4.7-4.7l0,0l0,0c0-2.6-2.1-4.7-4.7-4.7l0,0H62.9
+            c-2.6,0-4.7,2.1-4.7,4.7l0,0l0,0c0,2.6,2.1,4.7,4.7,4.7l0,0h10.9c2.6,0,4.7,2.1,4.7,4.7s-2.1,4.7-4.7,4.7l0,0H62.6
+            c-2.6,0-4.7,2.1-4.7,4.7s2.1,4.7,4.7,4.7h56.1c2.6,0,4.7-2.1,4.7-4.7s-2.1-4.7-4.7-4.7H97.5C94.9,186.7,92.8,184.6,92.8,182z"/>
+          <path class="st51" d="M296.8,183.3h-39.8c-2.6,0-4.7-2.1-4.7-4.7l0,0l0,0c0-2.6,2.1-4.7,4.7-4.7l0,0h39.8c2.6,0,4.7,2.1,4.7,4.7
+            l0,0l0,0C301.5,181.2,299.4,183.3,296.8,183.3L296.8,183.3z"/>
+          <path class="st51" d="M113.7,213.2h-4.6c-2.6,0-4.7-2.1-4.7-4.7l0,0l0,0c0-2.6,2.1-4.7,4.7-4.7h4.6c2.6,0,4.7,2.1,4.7,4.7l0,0
+            C118.4,211.1,116.3,213.2,113.7,213.2L113.7,213.2z"/>
+          <path class="st51" d="M249.1,190.4h11c0.8,0,1.5,0.7,1.5,1.5v6.5c0,0.8-0.7,1.5-1.5,1.5h-11c-0.8,0-1.5-0.7-1.5-1.5v-6.5
+            C247.6,191.1,248.2,190.4,249.1,190.4z"/>
+        </g>
+      </g>
+      </svg>
+
+    </div>
+    <div class="text">
+      <p class="request">500</p>
+      <p class="pun">Oops..</p>
+      <p class="info">Internal error</p>
+    </div>
+  </div>
+  <div class="links">
+    <a href="http://www.tongues-without-borders.com/" class="btn">Back to home</a>
+  </div>
+
+</body>
+
+<!-- <body class="rails-default-error-page">
+
   <div class="dialog">
     <div>
       <h1>We're sorry, but something went wrong.</h1>
     </div>
     <p>If you are the application owner check the logs for more information.</p>
   </div>
-</body>
+</body> -->
 </html>
