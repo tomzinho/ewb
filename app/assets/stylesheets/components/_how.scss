@@ -1,0 +1,104 @@
+#curvas-bg {
+  background-image: url('curvas2.png');
+  background-opacity: 0.5;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+.text-how {
+  grid-area: 'text';
+  background:#AFD4FD;
+  padding: 30px;
+
+  h1 {
+    font-family: "Nunito", sans-serif;
+    font-size: 44px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+
+  h2 {
+    font-family: "Space Mono", monospace;
+    font-size: 24px;
+  }
+
+
+  p {
+    padding-top: 30px;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+  }
+}
+
+.text-2 {
+  grid-area: 'text-2';
+  background:#AFD4FD;
+  padding: 30px;
+
+  h1 {
+    font-family: "Nunito", sans-serif;
+    font-size: 44px;
+    padding-bottom: 30px;
+  }
+
+  h2 {
+    padding-top: 15px;
+    font-family: "Space Mono", monospace;
+    font-size: 24px;
+  }
+
+
+  p {
+    padding-top: 30px;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+  }
+}
+
+.text-3 {
+  grid-area: 'text-3';
+  background:#AFD4FD;
+  padding: 30px;
+
+  h1 {
+    font-family: "Nunito", sans-serif;
+    font-size: 44px;
+    padding-bottom: 30px;
+  }
+
+  h2 {
+    padding-top: 15px;
+    font-family: "Space Mono", monospace;
+    font-size: 24px;
+  }
+
+
+  p {
+    padding-top: 30px;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+  }
+}
+
+.image {
+  grid-area: image;
+  max-height: 10px;
+  max-width: 10px;
+}
+
+.grid-container-how {
+  display: grid;
+  // grid-template-columns: 5fr 1fr;
+  // grid-template-rows:20vh 70vh 10vh;
+  grid-gap: 20px;
+  grid-template-areas:
+    "text-how image"
+    "text-2 text-3"
+}
+
+
+.bg-how {
+  // background-color: #6FAEF7;
+  background-repeat: repeat;
+  min-height: 480px;
+}
