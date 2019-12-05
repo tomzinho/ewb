@@ -3,11 +3,14 @@ class ResumesController < ApplicationController
   def new
     if current_user.candidate.blank?
       redirect_to root_path, alert: 'Operation Invalid'
-      return
     end
 
-    @resume = Resume.new
+    if current_user.first_name.blank?
+      redirect_to edit_candidate_path(current_user.candidate.id), alert: 'Complete your profile first'
+    else
+      @resume = Resume.new
       @candidate = current_user
+    end
   end
 
   def create
