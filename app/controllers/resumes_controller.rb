@@ -7,6 +7,7 @@ class ResumesController < ApplicationController
     end
 
     @resume = Resume.new
+      raise
       @candidate = current_user
   end
 
