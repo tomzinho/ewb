@@ -1,17 +1,20 @@
+
 <div class="container">
 
+<% if @candidate.photo.present? %>
+    <%= cl_image_tag @candidate.photo, height: 300, width: 400, crop: :fill %>
+  <% end %>
 
-   <h1><%= @candidate.small_desc %></h1>
+   <p><%= @candidate.small_desc %></p>
 
 </div>
-  <div class="row mt-4">
+
     <% @candidate.resumes.each do |resume| %>
-      <div class="candidate-resume-card">
-        <p class="candidate-resume-language"><strong><%= resume.resume_language %></strong></p>
-        <p class=""><%= resume.description %></p>
-      </div>
+       <%= resume.resume_language %>
+       <%= resume.experience %>
+
     <% end %>
-  </div>
+</div>
   <div class="row mt-2 d-flex justify-content-end">
     <%= link_to "Create a new Resume", new_resume_path, class: "btn btn-new-resume" %>
   </div>
