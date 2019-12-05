@@ -1,11 +1,11 @@
-.banner {
+.banner-begin {
   background-image: asset-url('cabecalho.png');
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
   height: 100vh;
   min-height: 480px;
-  padding: 170px 270px 10px 0px;
+  padding: 150px 270px 10px 50px;
 
 }
 
@@ -14,7 +14,7 @@
   font-weight: 400;
   color: #ffffff;
   text-align: left;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 
@@ -23,7 +23,7 @@
   font-weight: 800;
   color: #ffe310;
   text-align: left;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 

@@ -3,7 +3,11 @@
 <% if candidate.photo.present? %>
     <%= cl_image_tag candidate.photo, height: 300, width: 400, crop: :fill %>
   <% end %>
+
+  <h2><%= candidate.first_name %></h2>
+  <h2><%= candidate.last_name %></h2>
+
   <h2><%= candidate.user.email %></h2>
 
-  <p><%= candidate.address %></p>
+  <p><%= candidate.work_city %></p>
   <% end %>
