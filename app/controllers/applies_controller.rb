@@ -10,6 +10,7 @@ class AppliesController < ApplicationController
       end
     else
       redirect_to root_path, alert: 'Operation Invalid'
+    end
   end
 
   def index
