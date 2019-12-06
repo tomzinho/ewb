@@ -1,0 +1,31 @@
+.container-apply-partial {
+  width: 50vw;
+  margin: auto;
+
+
+.card-apply-partial {
+  background-color: #6FAEF7;
+  padding: 20px;
+  height: 18rem;
+  max-width: 200px;
+  overflow: hidden;
+
+  .card-apply-partial-h1 {
+    font-size: 1.5rem;
+    text-align: left;
+    font-family: "Space Mono", monospace;
+    font-weight: bold;
+    color: #0055C9;
+
+  }
+
+  .card-apply-partial-p {
+    font-size: 0.2rem;
+    text-align: left;
+    font-family: "Space Mono", monospace;
+    font-weight: bold;
+    color: #000000;
+  }
+
+  }
+}

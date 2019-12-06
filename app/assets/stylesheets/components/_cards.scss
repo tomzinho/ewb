@@ -46,7 +46,7 @@
 .card-job {
   background: white;
   display: flex;
-  align-items: center;
+  // align-items: center;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -58,8 +58,17 @@
   }
 }
 
+.card-job-image {
+  height: 130px;
+  width: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
 .card-job-infos {
-  padding: 40px;
+  padding: 20px 10px 20px 10px;
 }
 
 .cards {

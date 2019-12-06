@@ -1,0 +1,32 @@
+<div class="container-apply-partial">
+  <h1 class="text-center mt-5">My applies</h1>
+  <div class="row p-5 d-flex justify-content-center">
+
+      <% @applies.each do |apply| %>
+        <%= link_to job_path(apply.job), class: "col-sm-12 col-md-6 col-lg-4 col-xl-3"  do %>
+          <!-- <div style="margin-bottom: 20px;"> -->
+            <div class="card-apply-partial">
+
+              <div class="card-apply-partial-h1">
+                <h2> <%= apply.job.title %></h2>
+              </div>
+
+              <div class="card-apply-partial-p">
+                <p> <%= apply.job.description %> </p>
+              </div>
+
+          </div>
+
+        <!-- </div> -->
+        <% end %>
+      <% end %>
+
+
+
+  </div>
+</div>
+
+
+
+
+
