@@ -17,7 +17,7 @@ class AppliesController < ApplicationController
   def index
     @job = Job.find(params[:job_id])
     @applies = Apply.where(candidate_id: current_user)
-    raise
+
 
   end
 
