@@ -1,21 +1,25 @@
-  <%= simple_form_for(@user, url: role_path) do |f| %>
-    <%= f.error_notification %>
-    <div class="form-line">
-      <div class="label">
-        <p>Continue as:</p>
-      </div>
+<div class="role-background"> <!-- role-background -->
+  <div class="role-box"> <!-- role-box -->
 
-      <div class="options">
-        <div class="form-inputs">
-          <%= f.input_field :role, as: :radio_buttons, collection: [['candidate' , 'Candidate'], ['company', 'Company']], label_method: :second, value_method: :first, label: false,  wrapper_html: {class: 'inline'} %>
-        </div>
-      </div>
+    <h1 id="role-title">Continue as:</h1>
 
-      <div class="submit">
-        <div class="form-actions">
-          <%= f.button :submit, "ok", class: "btn-apply-now" %>
-        </div>
+      <%= simple_form_for(@user, url: role_path) do |f| %>
+        <%= f.error_notification %>
 
-      </div>
-    </div>
-  <% end %>
+            <div class="form-inputs container-role">
+            <%= f.input_field :role, as: :radio_buttons, collection: [['candidate' , 'Candidate'], ['company', 'Company']], label_method: :second, value_method: :first, label: false,  wrapper_html: {class: 'inline'} %>
+            </div>
+
+            <div style="display: flex; justify-content: center;">
+                   <div style="display: inline-grid;
+                    text-align: center;">
+              <%= f.button :submit, "Submit", class: "btn-role"  %>
+            </div>
+
+
+      <% end %>
+  </div>
+
+
+
+</div>

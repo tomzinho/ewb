@@ -1,16 +1,17 @@
-<div class="container">
-  <div>
-    <p>Olá <span><%= @candidate.user.email %></span></p>
-  </div>
+<div class="cand-dash-edit-bg">
 
-  <div class="col-6 offset-3 mb-5">
+  <div class="container">
+    <div class="cand-dash-edit-hello">
+      <h1>Olá <span><%= @candidate.user.email %></span></h1>
+    </div>
+
+  <div class="cand-dash-edit-box">
     <%= render 'cand_edit_form' %>
 
-   <%= link_to "Please start your resumes!", new_resume_path %>
+  <button class="btn btn-cand-edit-dash">
+   <%= link_to "Please start your resumes", new_resume_path %>
+  </button>
 
-
+  </div>
 </div>
-
-
-
 

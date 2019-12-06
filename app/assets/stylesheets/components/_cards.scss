@@ -66,6 +66,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  a{
+    z-index: 2;
+  }
 }
 
 .cards > a:hover {

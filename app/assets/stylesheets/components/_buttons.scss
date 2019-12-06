@@ -122,6 +122,64 @@
   }
 }
 
+.btn-upda-candidate {
+  background-color: #48328B;
+  color: #ffffff;
+  padding: 7px 12px 7px 12px;
+  font-family: "Space Mono", monospace;
+  border-radius: 50px;
+  margin-bottom: 15px;
+  width: 350px;
+
+  &:hover {
+  background-color: #9BDEDE;
+  text-decoration: none;
+  }
+}
+
+.btn-cand-edit-dash {
+  background-color: #AACF37;
+  color: #ffffff;
+  padding: 7px 12px 7px 12px;
+  font-family: "Space Mono", monospace;
+  border-radius: 50px;
+  margin-bottom: 15px;
+  width: 350px;
+
+  &:hover {
+  background-color: #9BDEDE;
+  text-decoration: none;
+  }
+}
+
+
+.btn-role {
+  background-color: #48328B;
+  color: #ffffff;
+  padding: 7px 12px 7px 12px;
+  font-family: "Space Mono", monospace;
+  border-radius: 50px;
+  margin-bottom: 15px;
+
+  &:hover {
+  background-color: #9BDEDE;
+  }
+}
+
+.btn-dash-videos {
+  background-color: #48328B;
+  color: #ffffff;
+  padding: 7px 12px 7px 12px;
+  font-family: "Space Mono", monospace;
+  border-radius: 50px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+
+  &:hover {
+  background-color: #9BDEDE;
+  }
+}
+
 .btn-login {
   background-color: #48328B;
   color: #ffffff;
