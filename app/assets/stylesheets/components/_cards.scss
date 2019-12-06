@@ -48,24 +48,29 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  img {
-    height: 10vh;
-    width: auto;
-    // max-width: 100%;
-    object-fit: contain;
-  }
+  padding: 16px;
+  // img {
+  //   height: 10vh;
+  //   width: auto;
+  //   // max-width: 100%;
+  //   object-fit: contain;
+  // }
 }
 
 .card-job-image {
-  height: 130px;
+  min-height: 100px;
+  max-height: 150px;
   width: 100%;
+  margin: auto;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-
+  overflow: hidden;
 }
 
 .card-job-infos {
+  max-height: 200px;
+  overflow: hidden;
   padding: 20px 10px 20px 10px;
 }
 
