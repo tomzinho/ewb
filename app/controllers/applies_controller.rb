@@ -2,6 +2,7 @@ class AppliesController < ApplicationController
   def new
     if current_user.candidate?
       if Resume.exists?(candidate_id: current_user.candidate.id)
+
         create_application
       elsif Apply.exists?(candidate_id: current_user)
         redirect_to candidate_dashboard_path(current_user.candidate.id), alert: 'You already applied'
@@ -17,6 +18,7 @@ class AppliesController < ApplicationController
     @job = Job.find(params[:job_id])
     @applies = Apply.where(candidate_id: current_user)
     raise
+
   end
 
   private
