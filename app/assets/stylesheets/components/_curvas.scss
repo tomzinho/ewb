@@ -13,24 +13,26 @@
 .curva-esq {
   position: absolute;
   transform: translate(-46vw, -9vh);
-  index: -1;
+  z-index: -1;
 }
 
 
 .curva-dir {
   position: absolute;
   transform: translate(45vw, -9vh);
-  index: -1;
+  z-index: -1;
 }
 
 .curvas-recruiter {
   transform: translate(-25vw, -19vh);
+  height: 100vh;
 
 }
 
 .curvas-jobs {
    position: absolute;
   transform: translate(54vw, -73vh);
-  index: -5;
+  height: 100vh;
 
 }
+
