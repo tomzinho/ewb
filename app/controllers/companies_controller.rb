@@ -13,6 +13,10 @@
     @company = Company.find(params[:id])
   end
 
+  def show
+    @company = Company.find(params[:id])
+  end
+
   private
 
   def company_params

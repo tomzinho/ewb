@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get '/companies/:id/dashboard', to: 'companies#dashboard', as: 'company_dashboard'
 
   resources :candidates, only: %i[edit update dashboard index]
-  resources :companies, only: %i[show edit update dashboard]
+  resources :companies, only: %i[show edit update dashboard show]
   resources :resumes, only: %i[new create show]
   resources :jobs, only: %i[show new create index]
 

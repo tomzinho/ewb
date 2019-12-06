@@ -1,21 +1,15 @@
 <div class="row">
-  <div class="company-banner">
-    <%= image_tag('companybanner.png') %>
-  </div>
+  <% company_banner = @company.banner_url || asset_url('companybanner.png') %>
+  <div class="company-banner" style="background-image: url(<%= company_banner %>)"></div>
+
+  <% company_logo = @company.logo_url || asset_url('logo-default.png') %>
+  <div class="company-logo" style="background-image: url(<%= company_logo %>)"></div>
+  <div class="row about">
+    <h1><%= @company.name %></h1>
+    <h2>Open jobs</h2>
+    <%= render  %>
+  <div class="btn btn-jobs">See all jobs</div>
 </div>
 
-<div class="row center">
-  <div class="company-logo">
-    <%= image_tag('companylogo.png') %>
-  </div>
-</div>
-
-<div class="row about">
-  <h1>Google</h1>
-  <p>Our mission is to organise the world’s information and make it universally accessible and useful.
-  Committed to significantly improving the lives of as many people as possible.
-  Keeping our users safe online with industry-leading tools, features, and principles, as well as educational programmes for children.</p>
-
-<div class="btn btn-jobs">See all jobs</div>
 </div>
 
