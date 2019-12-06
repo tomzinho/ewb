@@ -1,5 +1,6 @@
 .cand-index-wrapper{
   display: flex;
+  flex-wrap: wrap;
   flex: 1 0 auto;
 }
 
@@ -13,7 +14,23 @@
   margin: 10px;
   overflow: hidden;
   border-radius: 4px;
+  position: relative;
+  box-shadow: 2px 0 4px rgba(0,2px,0,.2);
 
+
+.cand-index-city{
+  font-weight: lighter;
+  transform: translate(50%, -450%);
+  color: white;
+  text-shadow: 0 0 4px black;
+}
+
+.cand-index-email{
+  font-weight: lighter;
+  line-height: .5rem;
+  font-size: .8rem;
+  margin-left: 8px;
+}
 
   .cand-index-img{
     width: 100%;
@@ -25,10 +42,14 @@
 
   .cand-index-fn{
     font-weight: lighter;
+    line-height: .1rem;
+    margin-top: 16px;
+    margin-left: 8px;
   }
   .cand-index-ln{
     font-weight: bolder;
     line-height: .1em;
+    margin-left: 8px;
   }
 }
 
