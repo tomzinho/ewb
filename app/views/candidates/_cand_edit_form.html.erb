@@ -1,15 +1,15 @@
 <%= simple_form_for @candidate do |f| %>
 
-  <div>
+<!--   <div>
     <p>Olá <span><%= @candidate.user.email %></span></p>
-  </div>
+  </div> -->
 
-  <%= f.input :first_name, label: "first name", required: true %>
-  <%= f.input :last_name, label: "last name", required: true %>
+  <%= f.input :first_name, label: "First name", required: true %>
+  <%= f.input :last_name, label: "Last name", required: true %>
 
 
   <% if @candidate.photo.present? %>
-    <%= cl_image_tag @candidate.photo, height: 300, width: 400, crop: :fill %>
+    <%= cl_image_tag @candidate.photo, height: 150, width: 150, crop: :fill %>
   <% end %>
 
   <%= f.input :photo %>
@@ -18,7 +18,7 @@
 
   <div class="city-select">
 
-  <%= f.select :work_city, ["São Paulo", "Rio de Janeiro", "Belo Horizonte","Brasilia","Other Brasil","Outside Brazil"], input_html:{ class: "select2-city", label: "City" } %>
+  <%= f.select :work_city, ["São Paulo", "Rio de Janeiro", "Belo Horizonte", "Brasilia", "Other Brasil", "Outside Brazil"], input_html:{ class: "select2-city", label: "City" } %>
 
    <!--  <select class="select2-city" name="work_city">
       <option value="S  P"> São Paulo</option>
@@ -53,7 +53,7 @@
   <%= f.input :workauth_gb, label:  "Great Britain" %>
 
 
-  <%= f.button :submit, class: "btn btn-primary" %>
+  <%= f.button :submit, class: "btn btn-upda-candidate" %>
 
 <% end %>
 
