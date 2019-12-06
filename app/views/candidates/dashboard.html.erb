@@ -39,7 +39,9 @@
 
              <% @candidate.resumes.each do |resume| %>
                 <%= resume.resume_language %>
-                <%= resume.video %>
+                <% if resume.video.url.present? %>
+                  <%= cl_video_tag resume.video.url, controls: true, width: 300 %>
+                <% end %>
              <% end %>
            <!-- aparece os resumes -->
         </div>
