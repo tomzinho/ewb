@@ -1,22 +1,13 @@
-<div class="container">
-  <div class="cand-index-wrapper">
-    <% @candidates.each do |candidate| %>
-      <div class="cand-index-col">
-        <div class="cand-index-card">
-          <% candidate_image = User.find(candidate.user_id).linkedin_picture_url || candidate.photo_url || asset_url('default-user.png') %>
-          <div class="cand-index-img", style = "background-image: url(<%= candidate_image %>)"></div>
-          <p class="cand-index-fn"><%= candidate.first_name %></p>
-          <p class="cand-index-ln"><%= candidate.last_name %></p>
+<% @candidates.each do |candidate| %>
 
-          <p class="cand-index-email"><%= candidate.user.email %></p>
+<% if candidate.photo.present? %>
+    <%= cl_image_tag candidate.photo, height: 300, width: 400, crop: :fill %>
+  <% end %>
 
-          <p class="cand-index-city"><%= candidate.work_city %></p>
-        </div>
-      </div>
-    <% end %>
+  <h2><%= candidate.first_name %></h2>
+  <h2><%= candidate.last_name %></h2>
 
-  </div>
+  <h2><%= candidate.user.email %></h2>
 
-
-
-</div>
+  <p><%= candidate.work_city %></p>
+  <% end %>

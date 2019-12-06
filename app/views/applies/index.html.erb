@@ -1,6 +1,2 @@
-<h1> <%= @job.title %> </h1>
-<ul>
-  <% @applies.each do |apply| %>
-    <li> <%= apply.candidate.user.first_name%> <%= apply.candidate.user.last_name %></li>
-  <% end %>
-</ul>
+<%= render 'job_applies' %>
+

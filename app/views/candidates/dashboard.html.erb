@@ -1,62 +1,76 @@
 <div class="cand-dash-bg">
 
-  <div class="container">
-    <div class="cand-dash-title">
+  <div class="container-grid-cand-dash">
+<!--     <div class="cand-dash-title">
          <h1 id="dash-videos-title">Dashboard</h1>
-    </div>
+    </div> -->
 
 
-    <div class="cand-dash-box">
-        <div class="">
-          <!-- aparece o nome -->
-          <p class="cand-dash-name"><%= current_user.first_name %><br> <%= current_user.last_name %></p>
-          <!-- aparece o nome -->
+    <div class="cand-dash-box" style="width: 70%; margin: auto">
+        <!-- aqui aparecem os videos -->
+
+        <div class="all-content-dash">
+
 
 
           <!-- aparece a foto -->
           <div class="cand-dash-photo">
             <% if @candidate.photo.present? %>
-              <%= cl_image_tag @candidate.photo, height: 150, width: 150, crop: :fill %>
+              <%= cl_image_tag @candidate.photo, height: 200, width: 200, crop: :fill %>
             <% end %>
           </div>
-          <!-- aparece a foto -->
+
+          <p class="cand-dash-name"><%= current_user.first_name %> <%= current_user.last_name %></p>
+
 
           <div class="cand-dash-description">
           <!-- aparece a descricao -->
               <p><%= @candidate.small_desc %></p>
           </div>
+
+          <div class="cand-dash-resume">
+            <!-- aparece os resumes -->
+            <h2 class="mt-4">Experiences</h2>
+              <% @candidate.resumes.each do |resume| %>
+                 <%= resume.experience %>
+              <% end %>
+            <!-- aparece os resumes -->
+          </div>
+
+            <div class="btn-cand-dash">
+            <%= link_to "Create a new resume", new_resume_path, class: "btn btn-dash-videos btn-cand-dash" %>
+          </div>
+
           <!-- aparece a descricao -->
+
+
         </div>
 
-        <!-- aparece os submit -->
-        <div class="btn-cand-dash">
-          <%= link_to "Create a new resume", new_resume_path, class: "btn btn-dash-videos btn-cand-dash" %>
-        </div>
-        <!-- aparece os submit -->
-
-        <div class="">
+        <div class="cand-dash-vid-wrap">
            <!-- aparece os videos -->
-
+           <h2>Pitches</h2>
              <% @candidate.resumes.each do |resume| %>
-                <%= resume.resume_language %>
-                <% if resume.video.url.present? %>
-                  <%= cl_video_tag resume.video.url, controls: true, width: 300 %>
-                <% end %>
+              <% if resume.video_url.present? %>
+               <div class="video-card">
+                  <h2><%= resume.resume_language %></h2>
+                  <!-- <h2 class="mt">My videos</h2> -->
+                  <div class="video-cand">
+                    <%= cl_video_tag resume.video_url, controls: true,  width: 400, thumb: true %>
+                  </div>
+               </div>
+              <% end %>
              <% end %>
-           <!-- aparece os resumes -->
         </div>
 
-        <div class="cand-dash-resume">
-          <!-- aparece os resumes -->
-            <% @candidate.resumes.each do |resume| %>
-               <%= resume.experience %>
-            <% end %>
-          <!-- aparece os resumes -->
-        </div>
 
       </div>
 
 
 
+      <div class="text-center">
+        <%= render 'jobs/job_applies' %>
+      </div>
+
   </div>
+
 </div>

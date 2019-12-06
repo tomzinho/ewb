@@ -16,6 +16,8 @@ class CandidatesController < ApplicationController
 
   def dashboard
     @candidate = Candidate.find(params[:id])
+    @applies = @candidate.applies
+
   end
 
   def index
