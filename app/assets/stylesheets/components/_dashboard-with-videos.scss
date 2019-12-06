@@ -1,25 +1,33 @@
 // DIVS //
+.all-content-dash {
+  grid-area: all-content;
+  // margin: 2% 1% 0 1%;
+
+}
+
+.container-grid-cand-dash {
+
+}
 
 .cand-dash-bg {
   background: asset-url('curvas3.png');
   background-repeat: no-repeat;
-  height: 100vh;
+  height: auto;
 }
 
 .cand-dash-box {
-  background-color: rgba(255,255,255,0.9);
-  line-height: 32px;
+  background-color: rgba(229,240,255,0.9);
+  line-height: 28px;
   padding: 30px;
+  // width: 80%;
+  // margin: auto;
   display: grid;
   margin: 2% 1% 0 1%;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
   grid-template-areas:
-  " cand-name             video-one          button-send-resume "
-  " image-photo           video-two          . "
-  " text-cand-resume      video-three        . "
-  " resume                resume             resume"
+  "all-content all-videos"
 }
 
 .cand-dash-title {
@@ -31,25 +39,51 @@
 
 .cand-dash-name {
   font-size: 2rem;
-  grid-area: cand-name;
+  margin-bottom: -2px;
 }
 
 .cand-dash-photo {
-  grid-area: image-photo;
+  margin-bottom: 50px;
 }
 
 .cand-dash-description {
-  grid-area: text-cand-resume;
   padding-top: 30px;
+  // max-width: 40%;
 
 }
 
 .cand-dash-resume{
-  grid-area: resume
+  margin-bottom: 2rem;
 }
 
 .btn-cand-dash {
   margin-top: 0;
-  grid-area: button-send-resume;
   justify-self: end;
 }
+
+.video-card{
+  width: 400px;
+  margin: 6px;
+  background-color: white;
+  border-radius: 4px;
+  padding-top: 8px;
+
+  h2{
+    line-height: 1.2rem;
+    font-weight: lighter;
+    font-size: 0.8rem;
+  }
+  .video-cand{
+
+  }
+}
+
+.cand-dash-vid-wrap{
+  width: 50%;
+  float: right;
+  grid-area: all-videos;
+}
+
+// .text-center {
+//   text-align: center !important;
+// }

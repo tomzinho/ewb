@@ -19,8 +19,12 @@
       <%= link_to job do  %>
         <div class="card-job ">
             <% if job.company.logo.to_s.empty? %>
-              <%= image_tag('logo-default.png', class: "logo-company-job-offers") %>
+             <div class="card-job-image" style="background-image: url( <%= asset_url('logo-default.png') %> )"></div>
+
             <% else %>
+
+            <div class="card-job-image" style="background-image: url( <%= job.company.logo_url %> )"></div>
+
               <%= image_tag(job.company.logo_url,  class: "logo-company-job-offers") %>
             <% end %>
           <div class="card-job-infos">
