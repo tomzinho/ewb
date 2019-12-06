@@ -1,0 +1,52 @@
+// DIVS //
+
+.cand-dash-edit-bg {
+  background: asset-url('curvas3.png');
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.cand-dash-edit-hello {
+  grid-area: cand-dash-edit-hello;
+  padding-bottom: 20px;
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.cand-dash-edit-box {
+  background-color: rgba(255,255,255,0.9);
+  line-height: 32px;
+  padding: 30px;
+  display: grid;
+  margin: 2% 1% 0 1%;
+  grid-template-columns: 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-template-areas:
+  " cand-dash-edit-hello"
+  " cand-dash-edit-photo"
+  " text-cand-resume"
+  " button-send-edit-resume"
+}
+
+.cand-dash-edit-name {
+  font-size: 2rem;
+  grid-area: cand-name;
+}
+
+.cand-dash-edit-photo {
+  grid-area: cand-dash-photo;
+}
+
+.cand-dash-edit-description {
+  grid-area: text-cand-resume;
+  padding-top: 30px;
+
+}
+
+.cand-dash-edit-resume{
+  grid-area: resume
+}
+
