@@ -1,0 +1,34 @@
+.cand-index-wrapper{
+  display: flex;
+  flex: 1 0 auto;
+}
+
+.cand-index-col{
+  flex: 1 0 200px;
+}
+
+.cand-index-card{
+  max-width: 300px;
+  max-height: 200px;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 4px;
+
+
+  .cand-index-img{
+    width: 100%;
+    height: 130px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  .cand-index-fn{
+    font-weight: lighter;
+  }
+  .cand-index-ln{
+    font-weight: bolder;
+    line-height: .1em;
+  }
+}
+
