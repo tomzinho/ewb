@@ -42,10 +42,12 @@
     </div>
 
   </div>
-  <div class="row mt-4 ">
-    <div class="col-12 d-flex flex-row-reverse">
-      <%= link_to "apply now", new_job_apply_path(@job), class: "btn btn-apply" %>
+  <% if current_user.role ==  'candidate' %>
+    <div class="row mt-4 ">
+      <div class="col-12 d-flex flex-row-reverse">
+        <%= link_to "apply now", new_job_apply_path(@job), class: "btn btn-apply" %>
+      </div>
     </div>
-  </div>
+  <% end %>
 </div>
 <%= image_tag('job-show.png', class: 'bg') %>

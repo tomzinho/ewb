@@ -36,16 +36,15 @@
               <% end %>
             <!-- aparece os resumes -->
           </div>
-
+          <% if current_user.role ==  'candidate' %>
             <div class="btn-cand-dash">
-            <%= link_to "Create a new resume", new_resume_path, class: "btn btn-dash-videos btn-cand-dash" %>
-          </div>
-
+              <%= link_to "Create a new resume", new_resume_path, class: "btn btn-dash-videos btn-cand-dash" %>
+            </div>
+          <% end %>
           <!-- aparece a descricao -->
 
 
         </div>
-
         <div class="cand-dash-vid-wrap">
            <!-- aparece os videos -->
            <h2>Pitches</h2>
@@ -66,10 +65,11 @@
       </div>
 
 
-
-      <div class="text-center">
-        <%= render 'jobs/job_applies' %>
-      </div>
+      <% if current_user.role ==  'candidate' %>
+        <div class="text-center">
+          <%= render 'jobs/job_applies' %>
+        </div>
+      <% end %>
 
   </div>
 
