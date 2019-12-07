@@ -34,7 +34,7 @@
                   <td><%= job.created_at %></td>
                   <td><%= job.description %> </td>
                   <td>
-                    <%= link_to job_applies_path(job) do %>
+                    <%= link_to list_path(job) do %>
                       <button class="btn btn-secondary mr-5">
                         <%= job.applies.count %></button>
 
