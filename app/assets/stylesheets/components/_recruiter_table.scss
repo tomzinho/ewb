@@ -53,9 +53,15 @@
 }
 
 .recruiter-background {
-  background: linear-gradient(#0B1ACE, #1D2EFD);
-  background-size: 100%;
-  height: 120vh;
+  // background-image: linear-gradient(#0B1ACE, #1D2EFD);
+  // background-repeat: repeat;
+  // background-size: 100%;
+  // height: auto;
+  margin: 0;
+  padding: 0;
+  background-color: #0B1ACE !important;
+  background-size: cover !important;
+  background-repeat: repeat !important;
 }
 
 .btn-recruiter-table {
