@@ -55,7 +55,7 @@
                   <h2><%= resume.resume_language %></h2>
                   <!-- <h2 class="mt">My videos</h2> -->
                   <div class="video-cand">
-                    <%= cl_video_tag resume.video_url, controls: true,  width: 400, thumb: true %>
+                    <%= cl_video_tag(resume.video_url, controls: true,  width: 400, gravity: "auto", loop: true, autoplay: false, poster: true) %>
                   </div>
                </div>
               <% end %>

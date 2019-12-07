@@ -1,0 +1,47 @@
+.wrapper-video-cards {
+  display: flex;
+  padding: 1rem;
+}
+
+.video-card-apply {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: red;
+}
+
+.video-card-list {
+  // background-color: #6FAEF7;
+  border-radius: 0.25rem;
+  // box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-top: 0;
+  width: 100%;
+
+  .video-card-thumb {
+    min-height: 200px;
+    margin-top: 0;
+    max-width: 400px;
+    vertical-align: middle;
+  }
+
+  .video-card-text {
+    margin-left: 1rem;
+    transform: translate(0, .8rem);
+    position: relative;
+    top: .5rem;
+    font-weight: bolder;
+    line-height: .5rem;
+  }
+
+  .video-card-resume{
+    align-self: flex-end;
+    transform: translate(0, -40%);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+}

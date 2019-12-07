@@ -4,15 +4,12 @@
   <!-- <div class="row p-5 d-flex justify-content-center"> -->
     <div class="wrapper-video-cards">
       <% @applies.each do |apply| %>
-        <%= link_to candidate_path(apply.candidate), class: "col-sm-12 col-md-6 col-lg-4 col-xl-3"  do %>
+        <% if Resume.find_by(candidate_id: apply.candidate.id).video_url.present? %>
+        <%= link_to candidate_dashboard_path(apply.candidate), class: "d-flex"  do %>
           <!-- <div style="margin-bottom: 20px;"> -->
-            <div class="video-card">
+            <div class="video-card-list">
               <div class="video-card-thumb">
-                <% if Resume.find(apply.candidate.id).video_url.present? %>
-                  <%= cl_video_tag Resume.find(apply.candidate.id).video_url, controls: true,  width: 400, thumb: true %>
-                <% else %>
-                  <%= image_tag 'logo-default.png', height: "200", width: "400" %>
-                <% end %>
+                  <%= cl_video_tag(Resume.find_by(candidate_id: apply.candidate.id).video_url, controls: true, width: 400, gravity: "auto", loop: false, autoplay: false, poster: true) %>
               </div>
 
               <div>
@@ -21,7 +18,8 @@
               <div class="video-card-resume">
                 <i class="fas fa-file"></i>
               </div>
-          </div>
+            </div>
+          <% end %>
         <% end %>
       <% end %>
 
